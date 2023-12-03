@@ -12,7 +12,7 @@ EntryPreviewWidget TagsEdit:disabled {
 
 QPushButton:default:hover, QPushButton:checked:hover {
     /* Using slightly lighter shade from palette(highlight) */
-    background: #568821;
+    background: #b345b8;
 }
 
 QToolTip {
