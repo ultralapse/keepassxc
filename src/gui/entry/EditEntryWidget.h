@@ -123,7 +123,6 @@ private slots:
     void removeKeyFromAgent();
     void decryptPrivateKey();
     void copyPublicKey();
-    void generatePrivateKey();
 #endif
 #ifdef WITH_XC_BROWSER
     void updateBrowserModified();
@@ -169,7 +168,6 @@ private:
     bool m_history;
 #ifdef WITH_XC_SSHAGENT
     KeeAgentSettings m_sshAgentSettings;
-    QString m_pendingPrivateKey;
 #endif
     const QScopedPointer<Ui::EditEntryWidgetMain> m_mainUi;
     const QScopedPointer<Ui::EditEntryWidgetAdvanced> m_advancedUi;

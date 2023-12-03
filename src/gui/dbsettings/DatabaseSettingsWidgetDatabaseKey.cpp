@@ -65,7 +65,9 @@ DatabaseSettingsWidgetDatabaseKey::DatabaseSettingsWidgetDatabaseKey(QWidget* pa
     setLayout(vbox);
 }
 
-DatabaseSettingsWidgetDatabaseKey::~DatabaseSettingsWidgetDatabaseKey() = default;
+DatabaseSettingsWidgetDatabaseKey::~DatabaseSettingsWidgetDatabaseKey()
+{
+}
 
 void DatabaseSettingsWidgetDatabaseKey::load(QSharedPointer<Database> db)
 {

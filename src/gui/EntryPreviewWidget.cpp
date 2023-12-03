@@ -111,7 +111,9 @@ EntryPreviewWidget::EntryPreviewWidget(QWidget* parent)
 #endif
 }
 
-EntryPreviewWidget::~EntryPreviewWidget() = default;
+EntryPreviewWidget::~EntryPreviewWidget()
+{
+}
 
 bool EntryPreviewWidget::eventFilter(QObject* object, QEvent* event)
 {

@@ -23,7 +23,9 @@
 
 FileDialog* FileDialog::m_instance(nullptr);
 
-FileDialog::FileDialog() = default;
+FileDialog::FileDialog()
+{
+}
 
 QString FileDialog::getOpenFileName(QWidget* parent,
                                     const QString& caption,

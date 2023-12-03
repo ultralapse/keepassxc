@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010 Felix Geyer <debfx@fobos.de>
+ *  Copyright (C) 2012 Felix Geyer <debfx@fobos.de>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -15,30 +15,25 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KEEPASSX_LAYEREDSTREAM_H
-#define KEEPASSX_LAYEREDSTREAM_H
+#ifndef KEEPASSX_LISTDELETER_H
+#define KEEPASSX_LISTDELETER_H
 
-#include <QIODevice>
+#include <QList>
 
-class LayeredStream : public QIODevice
+template <typename T> class ListDeleter
 {
-    Q_OBJECT
-
 public:
-    explicit LayeredStream(QIODevice* baseDevice);
-    virtual ~LayeredStream();
+    inline explicit ListDeleter(QList<T>* list)
+        : m_list(list)
+    {
+    }
+    inline ~ListDeleter()
+    {
+        qDeleteAll(*m_list);
+    }
 
-    bool isSequential() const override;
-    bool open(QIODevice::OpenMode mode) override;
-
-protected:
-    qint64 readData(char* data, qint64 maxSize) override;
-    qint64 writeData(const char* data, qint64 maxSize) override;
-
-    QIODevice* const m_baseDevice;
-
-private slots:
-    void closeStream();
+private:
+    QList<T>* m_list;
 };
 
-#endif // KEEPASSX_LAYEREDSTREAM_H
+#endif // KEEPASSX_LISTDELETER_H

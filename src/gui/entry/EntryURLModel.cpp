@@ -20,7 +20,7 @@
 
 #include "browser/BrowserService.h"
 #include "core/EntryAttributes.h"
-#include "core/UrlTools.h"
+#include "core/Tools.h"
 #include "gui/Icons.h"
 #include "gui/styles/StateColorPalette.h"
 
@@ -67,14 +67,14 @@ QVariant EntryURLModel::data(const QModelIndex& index, int role) const
     }
 
     const auto value = m_entryAttributes->value(key);
-    const auto urlValid = urlTools()->isUrlValid(value);
+    const auto urlValid = Tools::checkUrlValid(value);
 
     // Check for duplicate URLs in the attribute list. Excludes the current key/value from the comparison.
-    auto customAttributeKeys = m_entryAttributes->customKeys().filter(EntryAttributes::AdditionalUrlAttribute);
+    auto customAttributeKeys = m_entryAttributes->customKeys().filter(BrowserService::ADDITIONAL_URL);
     customAttributeKeys.removeOne(key);
 
-    const auto duplicateUrl =
-        m_entryAttributes->values(customAttributeKeys).contains(value) || urlTools()->isUrlIdentical(value, m_entryUrl);
+    const auto duplicateUrl = m_entryAttributes->values(customAttributeKeys).contains(value)
+                              || browserService()->isUrlIdentical(value, m_entryUrl);
     if (role == Qt::BackgroundRole && (!urlValid || duplicateUrl)) {
         StateColorPalette statePalette;
         return statePalette.color(StateColorPalette::ColorRole::Error);
@@ -148,7 +148,7 @@ void EntryURLModel::updateAttributes()
 
     const auto attributesKeyList = m_entryAttributes->keys();
     for (const auto& key : attributesKeyList) {
-        if (!EntryAttributes::isDefaultAttribute(key) && key.contains(EntryAttributes::AdditionalUrlAttribute)) {
+        if (!EntryAttributes::isDefaultAttribute(key) && key.contains(BrowserService::ADDITIONAL_URL)) {
             const auto value = m_entryAttributes->value(key);
             m_urls.append(qMakePair(key, value));
 

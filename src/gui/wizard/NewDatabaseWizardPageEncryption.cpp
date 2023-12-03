@@ -28,4 +28,6 @@ NewDatabaseWizardPageEncryption::NewDatabaseWizardPageEncryption(QWidget* parent
                    "Don't worry, you can change them later in the database settings."));
 }
 
-NewDatabaseWizardPageEncryption::~NewDatabaseWizardPageEncryption() = default;
+NewDatabaseWizardPageEncryption::~NewDatabaseWizardPageEncryption()
+{
+}

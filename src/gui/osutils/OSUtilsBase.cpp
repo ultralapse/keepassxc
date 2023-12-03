@@ -22,7 +22,9 @@ OSUtilsBase::OSUtilsBase(QObject* parent)
 {
 }
 
-OSUtilsBase::~OSUtilsBase() = default;
+OSUtilsBase::~OSUtilsBase()
+{
+}
 
 bool OSUtilsBase::setPreventScreenCapture(QWindow*, bool) const
 {

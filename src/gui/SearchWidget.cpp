@@ -81,12 +81,14 @@ SearchWidget::SearchWidget(QWidget* parent)
     }
 }
 
-SearchWidget::~SearchWidget() = default;
+SearchWidget::~SearchWidget()
+{
+}
 
 bool SearchWidget::eventFilter(QObject* obj, QEvent* event)
 {
     if (event->type() == QEvent::KeyPress) {
-        auto keyEvent = static_cast<QKeyEvent*>(event);
+        QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
         if (keyEvent->key() == Qt::Key_Escape) {
             emit escapePressed();
             return true;

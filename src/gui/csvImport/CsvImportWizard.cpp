@@ -29,7 +29,9 @@ CsvImportWizard::CsvImportWizard(QWidget* parent)
     connect(m_parse, SIGNAL(editFinished(bool)), this, SLOT(parseFinished(bool)));
 }
 
-CsvImportWizard::~CsvImportWizard() = default;
+CsvImportWizard::~CsvImportWizard()
+{
+}
 
 void CsvImportWizard::load(const QString& filename, Database* database)
 {

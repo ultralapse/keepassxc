@@ -138,6 +138,10 @@ ApplicationSettingsWidget::ApplicationSettingsWidget(QWidget* parent)
         m_secUi->lockDatabaseMinimizeCheckBox->setEnabled(!state);
     });
 
+    connect(m_secUi->quickUnlockCheckBox, &QCheckBox::toggled, this, [this](bool state) {
+        m_secUi->quickUnlockRememberCheckBox->setEnabled(state);
+    });
+
     // Disable mouse wheel grab when scrolling
     // This prevents combo box and spinner values from changing without explicit focus
     auto mouseWheelFilter = new MouseWheelEventFilter(this);
@@ -161,7 +165,9 @@ ApplicationSettingsWidget::ApplicationSettingsWidget(QWidget* parent)
 #endif
 }
 
-ApplicationSettingsWidget::~ApplicationSettingsWidget() = default;
+ApplicationSettingsWidget::~ApplicationSettingsWidget()
+{
+}
 
 void ApplicationSettingsWidget::addSettingsPage(ISettingsPage* page)
 {
@@ -311,6 +317,7 @@ void ApplicationSettingsWidget::loadSettings()
 
     m_secUi->quickUnlockCheckBox->setEnabled(getQuickUnlock()->isAvailable());
     m_secUi->quickUnlockCheckBox->setChecked(config()->get(Config::Security_QuickUnlock).toBool());
+    m_secUi->quickUnlockRememberCheckBox->setChecked(config()->get(Config::Security_QuickUnlockRemember).toBool());
 
     for (const ExtraPage& page : asConst(m_extraPages)) {
         page.loadSettings();
@@ -424,6 +431,7 @@ void ApplicationSettingsWidget::saveSettings()
 
     if (m_secUi->quickUnlockCheckBox->isEnabled()) {
         config()->set(Config::Security_QuickUnlock, m_secUi->quickUnlockCheckBox->isChecked());
+        config()->set(Config::Security_QuickUnlockRemember, m_secUi->quickUnlockRememberCheckBox->isChecked());
     }
 
     // Security: clear storage if related settings are disabled

@@ -35,7 +35,7 @@
 #include <QStandardPaths>
 
 #if defined(Q_OS_UNIX)
-#include <csignal>
+#include <signal.h>
 #include <sys/socket.h>
 #include <unistd.h>
 #endif
@@ -284,7 +284,7 @@ void Application::processIncomingConnection()
 
 void Application::socketReadyRead()
 {
-    auto socket = qobject_cast<QLocalSocket*>(sender());
+    QLocalSocket* socket = qobject_cast<QLocalSocket*>(sender());
     if (!socket) {
         return;
     }

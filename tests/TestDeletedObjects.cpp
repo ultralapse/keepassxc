@@ -37,7 +37,7 @@ void TestDeletedObjects::createAndDelete(QSharedPointer<Database> db, int delObj
     Group* root = db->rootGroup();
     int rootChildrenCount = root->children().size();
 
-    auto g = new Group();
+    Group* g = new Group();
     g->setParent(root);
     QUuid gUuid = QUuid::createUuid();
     g->setUuid(gUuid);
@@ -46,19 +46,19 @@ void TestDeletedObjects::createAndDelete(QSharedPointer<Database> db, int delObj
     QCOMPARE(db->deletedObjects().at(delObjectsSize - 1).uuid, gUuid);
     QCOMPARE(rootChildrenCount, root->children().size());
 
-    auto g1 = new Group();
+    Group* g1 = new Group();
     g1->setParent(root);
     QUuid g1Uuid = QUuid::createUuid();
     g1->setUuid(g1Uuid);
-    auto e1 = new Entry();
+    Entry* e1 = new Entry();
     e1->setGroup(g1);
     QUuid e1Uuid = QUuid::createUuid();
     e1->setUuid(e1Uuid);
-    auto g2 = new Group();
+    Group* g2 = new Group();
     g2->setParent(g1);
     QUuid g2Uuid = QUuid::createUuid();
     g2->setUuid(g2Uuid);
-    auto e2 = new Entry();
+    Entry* e2 = new Entry();
     e2->setGroup(g2);
     QUuid e2Uuid = QUuid::createUuid();
     e2->setUuid(e2Uuid);
@@ -73,7 +73,7 @@ void TestDeletedObjects::createAndDelete(QSharedPointer<Database> db, int delObj
     QCOMPARE(db->deletedObjects().at(delObjectsSize - 1).uuid, g1Uuid);
     QCOMPARE(rootChildrenCount, root->children().size());
 
-    auto e3 = new Entry();
+    Entry* e3 = new Entry();
     e3->setGroup(root);
     QUuid e3Uuid = QUuid::createUuid();
     e3->setUuid(e3Uuid);

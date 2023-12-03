@@ -56,20 +56,18 @@ Q_OBJECT
 public:
 enum StreamFormat { ZlibFormat, GzipFormat, RawZipFormat };
     QtIOCompressor(QIODevice *device, int compressionLevel = 6, int bufferSize = 65500);
-    ~QtIOCompressor() override;
+    ~QtIOCompressor();
     void setStreamFormat(StreamFormat format);
     StreamFormat streamFormat() const;
     static bool isGzipSupported();
-    bool isSequential() const override;
-    bool open(OpenMode mode) override;
-    void close() override;
+    bool isSequential() const;
+    bool open(OpenMode mode);
+    void close();
     void flush();
-    qint64 bytesAvailable() const override;
-
+    qint64 bytesAvailable() const;
 protected:
-    qint64 readData(char* data, qint64 maxSize) override;
-    qint64 writeData(const char* data, qint64 maxSize) override;
-
+    qint64 readData(char * data, qint64 maxSize);
+    qint64 writeData(const char * data, qint64 maxSize);
 private:
     static bool checkGzipSupport(const char * const versionString);
     QtIOCompressorPrivate *d_ptr;

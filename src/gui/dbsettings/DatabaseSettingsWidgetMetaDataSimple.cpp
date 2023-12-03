@@ -28,7 +28,9 @@ DatabaseSettingWidgetMetaData::DatabaseSettingWidgetMetaData(QWidget* parent)
     m_ui->setupUi(this);
 }
 
-DatabaseSettingWidgetMetaData::~DatabaseSettingWidgetMetaData() = default;
+DatabaseSettingWidgetMetaData::~DatabaseSettingWidgetMetaData()
+{
+}
 
 void DatabaseSettingWidgetMetaData::initialize()
 {

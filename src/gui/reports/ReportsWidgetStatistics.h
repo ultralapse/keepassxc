@@ -34,7 +34,7 @@ class ReportsWidgetStatistics : public QWidget
     Q_OBJECT
 public:
     explicit ReportsWidgetStatistics(QWidget* parent = nullptr);
-    ~ReportsWidgetStatistics() override;
+    ~ReportsWidgetStatistics();
 
     void loadSettings(QSharedPointer<Database> db);
     void saveSettings();

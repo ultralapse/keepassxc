@@ -89,22 +89,22 @@ void TestHibp::testPwned()
 
     Group* root = m_db->rootGroup();
 
-    auto entry1 = new Entry();
+    Entry* entry1 = new Entry();
     entry1->setPassword("foo");
     entry1->setGroup(root);
 
-    auto entry2 = new Entry();
+    Entry* entry2 = new Entry();
     entry2->setPassword("xyz");
     entry2->setGroup(root);
 
-    auto entry3 = new Entry();
+    Entry* entry3 = new Entry();
     entry3->setPassword("foo");
     m_db->recycleEntry(entry3);
 
-    auto group1 = new Group();
+    Group* group1 = new Group();
     group1->setParent(root);
 
-    auto entry4 = new Entry();
+    Entry* entry4 = new Entry();
     entry4->setPassword("bar");
     entry4->setGroup(group1);
 

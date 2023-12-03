@@ -93,12 +93,12 @@ QSharedPointer<PasswordGenerator> Generate::createGenerator(QSharedPointer<QComm
         passwordGenerator->setLength(PasswordGenerator::DefaultLength);
     } else if (passwordLength.toInt() <= 0) {
         err << QObject::tr("Invalid password length %1").arg(passwordLength) << endl;
-        return {};
+        return QSharedPointer<PasswordGenerator>(nullptr);
     } else {
         passwordGenerator->setLength(passwordLength.toInt());
     }
 
-    PasswordGenerator::CharClasses classes;
+    PasswordGenerator::CharClasses classes = 0x0;
 
     if (parser->isSet(Generate::LowerCaseOption)) {
         classes |= PasswordGenerator::LowerLetters;
@@ -116,7 +116,7 @@ QSharedPointer<PasswordGenerator> Generate::createGenerator(QSharedPointer<QComm
         classes |= PasswordGenerator::EASCII;
     }
 
-    PasswordGenerator::GeneratorFlags flags;
+    PasswordGenerator::GeneratorFlags flags = 0x0;
 
     if (parser->isSet(Generate::ExcludeSimilarCharsOption)) {
         flags |= PasswordGenerator::ExcludeLookAlike;
@@ -139,7 +139,7 @@ QSharedPointer<PasswordGenerator> Generate::createGenerator(QSharedPointer<QComm
 
     if (!passwordGenerator->isValid()) {
         err << QObject::tr("Invalid password generator after applying all options") << endl;
-        return {};
+        return QSharedPointer<PasswordGenerator>(nullptr);
     }
 
     return passwordGenerator;

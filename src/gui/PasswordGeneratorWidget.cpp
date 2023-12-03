@@ -83,7 +83,7 @@ PasswordGeneratorWidget::PasswordGeneratorWidget(QWidget* parent)
     // set font size of password quality and entropy labels dynamically to 80% of
     // the default font size, but make it no smaller than 8pt
     QFont defaultFont;
-    auto smallerSize = static_cast<int>(defaultFont.pointSize() * 0.8f);
+    int smallerSize = static_cast<int>(defaultFont.pointSize() * 0.8f);
     if (smallerSize >= 8) {
         defaultFont.setPointSize(smallerSize);
         m_ui->entropyLabel->setFont(defaultFont);
@@ -121,7 +121,7 @@ void PasswordGeneratorWidget::closeEvent(QCloseEvent* event)
 {
     // Emits closed signal when clicking X from title bar
     emit closed();
-    QWidget::closeEvent(event);
+    event->accept();
 }
 
 PasswordGeneratorWidget* PasswordGeneratorWidget::popupGenerator(QWidget* parent)

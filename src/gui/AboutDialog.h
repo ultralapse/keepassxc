@@ -32,7 +32,7 @@ class AboutDialog : public QDialog
 
 public:
     explicit AboutDialog(QWidget* parent = nullptr);
-    ~AboutDialog() override;
+    ~AboutDialog();
 
 protected slots:
     void copyToClipboard();

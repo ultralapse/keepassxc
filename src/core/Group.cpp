@@ -131,19 +131,6 @@ QString Group::tags() const
     return m_data.tags;
 }
 
-QString Group::fullPath() const
-{
-    QString fullPath;
-    auto group = this;
-
-    do {
-        fullPath.insert(0, "/" + group->name());
-        group = group->parentGroup();
-    } while (group);
-
-    return fullPath;
-}
-
 int Group::iconNumber() const
 {
     return m_data.iconNumber;
@@ -180,7 +167,7 @@ QString Group::effectiveAutoTypeSequence() const
     const Group* group = this;
     do {
         if (group->autoTypeEnabled() == Group::Disable) {
-            return {};
+            return QString();
         }
 
         sequence = group->defaultAutoTypeSequence();
@@ -904,7 +891,7 @@ Group* Group::findChildByName(const QString& name)
  */
 Group* Group::clone(Entry::CloneFlags entryFlags, Group::CloneFlags groupFlags) const
 {
-    auto clonedGroup = new Group();
+    Group* clonedGroup = new Group();
 
     clonedGroup->setUpdateTimeinfo(false);
 

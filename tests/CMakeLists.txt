@@ -1,4 +1,4 @@
-#  Copyright (C) 2023 KeePassXC Team <team@keepassxc.org>
+#  Copyright (C) 2018 KeePassXC Team <team@keepassxc.org>
 #  Copyright (C) 2010 Felix Geyer <debfx@fobos.de>
 #
 #  This program is free software: you can redistribute it and/or modify
@@ -75,8 +75,6 @@ macro(add_unit_test)
         add_test(${_test_NAME} ${_test_LAUNCHER} ${_test_NAME})
     endif(KDE4_TEST_OUTPUT STREQUAL "xml")
 
-    set_tests_properties(${_test_NAME} PROPERTIES ENVIRONMENT "LANG=en_US.UTF-8")
-
     if(NOT MSVC_IDE)   #not needed for the ide
         # if the tests are EXCLUDE_FROM_ALL, add a target "buildtests" to build all tests
         if(NOT WITH_TESTS)
@@ -150,8 +148,6 @@ if(WITH_XC_NETWORKING)
             LIBS ${TEST_LIBRARIES})
 
     add_unit_test(NAME testicondownloader SOURCES TestIconDownloader.cpp LIBS ${TEST_LIBRARIES})
-
-    add_unit_test(NAME testurltools SOURCES TestUrlTools.cpp LIBS ${TEST_LIBRARIES})
 endif()
 
 if(WITH_XC_AUTOTYPE)
@@ -233,17 +229,6 @@ endif()
 if(WITH_XC_BROWSER)
     add_unit_test(NAME testbrowser SOURCES TestBrowser.cpp
         LIBS ${TEST_LIBRARIES})
-
-    if(WITH_XC_BROWSER_PASSKEYS)
-        # Prevent duplicate linking with macOS
-        if(APPLE)
-            add_unit_test(NAME testpasskeys SOURCES TestPasskeys.cpp
-                    LIBS ${TEST_LIBRARIES})
-        else()
-            add_unit_test(NAME testpasskeys SOURCES TestPasskeys.cpp
-                    LIBS keepassxcbrowser ${TEST_LIBRARIES})
-        endif()
-    endif()
 endif()
 
 add_unit_test(NAME testcli SOURCES TestCli.cpp

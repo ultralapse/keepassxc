@@ -127,7 +127,9 @@ DatabaseOpenWidget::DatabaseOpenWidget(QWidget* parent)
     m_ui->resetQuickUnlockButton->setShortcut(Qt::Key_Escape);
 }
 
-DatabaseOpenWidget::~DatabaseOpenWidget() = default;
+DatabaseOpenWidget::~DatabaseOpenWidget()
+{
+}
 
 void DatabaseOpenWidget::showEvent(QShowEvent* event)
 {
@@ -279,7 +281,10 @@ void DatabaseOpenWidget::openDatabase()
         // Save Quick Unlock credentials if available
         if (!blockQuickUnlock && isQuickUnlockAvailable()) {
             auto keyData = databaseKey->serialize();
-            getQuickUnlock()->setKey(m_db->publicUuid(), keyData);
+            if (!getQuickUnlock()->setKey(m_db->publicUuid(), keyData) && !getQuickUnlock()->errorString().isEmpty()) {
+                getMainWindow()->displayTabMessage(getQuickUnlock()->errorString(),
+                                                   MessageWidget::MessageType::Warning);
+            }
             m_ui->messageWidget->hideMessage();
         }
 
@@ -485,12 +490,12 @@ void DatabaseOpenWidget::hardwareKeyResponse(bool found)
 
 void DatabaseOpenWidget::openHardwareKeyHelp()
 {
-    QDesktopServices::openUrl(QUrl("https://keepassxc.org/docs/#faq-yubikey-2fa"));
+    QDesktopServices::openUrl(QUrl("https://keepassxc.org/docs#faq-cat-yubikey"));
 }
 
 void DatabaseOpenWidget::openKeyFileHelp()
 {
-    QDesktopServices::openUrl(QUrl("https://keepassxc.org/docs/#faq-keyfile-howto"));
+    QDesktopServices::openUrl(QUrl("https://keepassxc.org/docs#faq-cat-keyfile"));
 }
 
 void DatabaseOpenWidget::setUserInteractionLock(bool state)

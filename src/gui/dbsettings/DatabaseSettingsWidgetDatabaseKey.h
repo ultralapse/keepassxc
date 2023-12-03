@@ -44,6 +44,11 @@ public:
 
     void load(QSharedPointer<Database> db) override;
 
+    inline bool hasAdvancedMode() const override
+    {
+        return false;
+    }
+
 public slots:
     void initialize() override;
     void uninitialize() override;

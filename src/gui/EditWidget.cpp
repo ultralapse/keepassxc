@@ -45,7 +45,9 @@ EditWidget::EditWidget(QWidget* parent)
     connect(m_ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(buttonClicked(QAbstractButton*)));
 }
 
-EditWidget::~EditWidget() = default;
+EditWidget::~EditWidget()
+{
+}
 
 void EditWidget::addPage(const QString& labelText, const QIcon& icon, QWidget* widget)
 {

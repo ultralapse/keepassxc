@@ -29,7 +29,7 @@ QString AutoTypePlatformTest::keyToString(Qt::Key key)
 
 QStringList AutoTypePlatformTest::windowTitles()
 {
-    return {};
+    return QStringList();
 }
 
 WId AutoTypePlatformTest::activeWindow()

@@ -25,7 +25,7 @@ class DatabaseInfo : public DatabaseCommand
 public:
     DatabaseInfo();
 
-    int executeWithDatabase(QSharedPointer<Database> db, QSharedPointer<QCommandLineParser> parser) override;
+    int executeWithDatabase(QSharedPointer<Database> db, QSharedPointer<QCommandLineParser> parser);
 };
 
 #endif // KEEPASSXC_DATABASEINFO_H

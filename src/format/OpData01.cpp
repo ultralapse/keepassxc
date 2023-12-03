@@ -27,7 +27,9 @@ OpData01::OpData01(QObject* parent)
 {
 }
 
-OpData01::~OpData01() = default;
+OpData01::~OpData01()
+{
+}
 
 bool OpData01::decodeBase64(QString const& b64String, const QByteArray& key, const QByteArray& hmacKey)
 {

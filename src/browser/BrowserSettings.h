@@ -17,8 +17,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KEEPASSXC_BROWSERSETTINGS_H
-#define KEEPASSXC_BROWSERSETTINGS_H
+#ifndef BROWSERSETTINGS_H
+#define BROWSERSETTINGS_H
 
 #include "NativeMessageInstaller.h"
 
@@ -64,8 +64,6 @@ public:
 #endif
     bool updateBinaryPath();
     void setUpdateBinaryPath(bool enabled);
-    bool allowGetDatabaseEntriesRequest();
-    void setAllowGetDatabaseEntriesRequest(bool enabled);
     bool allowExpiredCredentials();
     void setAllowExpiredCredentials(bool enabled);
 
@@ -92,4 +90,4 @@ inline BrowserSettings* browserSettings()
     return BrowserSettings::instance();
 }
 
-#endif // KEEPASSXC_BROWSERSETTINGS_H
+#endif // BROWSERSETTINGS_H

@@ -39,7 +39,9 @@ namespace Ui
 class IEditGroupPage
 {
 public:
-    virtual ~IEditGroupPage() = default;
+    virtual ~IEditGroupPage()
+    {
+    }
     virtual QString name() = 0;
     virtual QIcon icon() = 0;
     virtual QWidget* createWidget() = 0;
@@ -53,7 +55,7 @@ class EditGroupWidget : public EditWidget
 
 public:
     explicit EditGroupWidget(QWidget* parent = nullptr);
-    ~EditGroupWidget() override;
+    ~EditGroupWidget();
 
     void loadGroup(Group* group, bool create, const QSharedPointer<Database>& database);
     void clear();

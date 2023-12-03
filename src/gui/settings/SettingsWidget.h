@@ -34,6 +34,13 @@ public:
     Q_DISABLE_COPY(SettingsWidget);
     ~SettingsWidget() override;
 
+    /**
+     * @return true if widget has an advanced mode
+     */
+    virtual bool hasAdvancedMode() const = 0;
+    virtual void setAdvancedMode(bool advanced);
+    virtual bool advancedMode() const;
+
 public slots:
     /**
      * Initialize settings widget.
@@ -55,10 +62,11 @@ public slots:
     /**
      * Discard settings.
      */
-    virtual void discard();
+    virtual void discard(){};
 
 signals:
     void editFinished(bool saved);
+    void advancedModeChanged(bool advanced);
 
 private:
     bool m_advancedMode = false;

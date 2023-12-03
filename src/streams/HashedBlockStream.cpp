@@ -126,7 +126,7 @@ bool HashedBlockStream::readHashedBlock()
 {
     bool ok;
 
-    auto index = Endian::readSizedInt<quint32>(m_baseDevice, ByteOrder, &ok);
+    quint32 index = Endian::readSizedInt<quint32>(m_baseDevice, ByteOrder, &ok);
     if (!ok || index != m_blockIndex) {
         m_error = true;
         setErrorString("Invalid block index.");

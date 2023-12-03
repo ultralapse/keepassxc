@@ -35,7 +35,7 @@ class CategoryListWidget : public QWidget
 
 public:
     CategoryListWidget(QWidget* parent = nullptr);
-    ~CategoryListWidget() override;
+    ~CategoryListWidget();
 
     int currentCategory();
     void setCurrentCategory(int index);

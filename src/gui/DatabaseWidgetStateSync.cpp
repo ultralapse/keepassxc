@@ -36,7 +36,9 @@ DatabaseWidgetStateSync::DatabaseWidgetStateSync(QObject* parent)
     connect(qApp, &QCoreApplication::aboutToQuit, this, &DatabaseWidgetStateSync::sync);
 }
 
-DatabaseWidgetStateSync::~DatabaseWidgetStateSync() = default;
+DatabaseWidgetStateSync::~DatabaseWidgetStateSync()
+{
+}
 
 /**
  * Sync state with persistent storage.

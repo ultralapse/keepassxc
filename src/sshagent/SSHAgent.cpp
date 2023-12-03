@@ -433,7 +433,7 @@ bool SSHAgent::listIdentities(QList<QSharedPointer<OpenSSHKey>>& list)
  * Check if this identity is loaded in the SSH Agent.
  *
  * @param key identity to remove
- * @param loaded is the key loaded
+ * @param loaded is the key laoded
  * @return true on success
  */
 bool SSHAgent::checkIdentity(const OpenSSHKey& key, bool& loaded)

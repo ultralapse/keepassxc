@@ -30,7 +30,9 @@ namespace Ui
 class ISettingsPage
 {
 public:
-    virtual ~ISettingsPage() = default;
+    virtual ~ISettingsPage()
+    {
+    }
     virtual QString name() = 0;
     virtual QIcon icon() = 0;
     virtual QWidget* createWidget() = 0;
@@ -44,7 +46,7 @@ class ApplicationSettingsWidget : public EditWidget
 
 public:
     explicit ApplicationSettingsWidget(QWidget* parent = nullptr);
-    ~ApplicationSettingsWidget() override;
+    ~ApplicationSettingsWidget();
     void addSettingsPage(ISettingsPage* page);
     void loadSettings();
 

@@ -88,7 +88,9 @@ void CsvImportWidget::skippedChanged(int rows)
     updateTableview();
 }
 
-CsvImportWidget::~CsvImportWidget() = default;
+CsvImportWidget::~CsvImportWidget()
+{
+}
 
 void CsvImportWidget::configParser()
 {
@@ -194,7 +196,7 @@ void CsvImportWidget::writeDatabase()
         if (not m_parserModel->data(m_parserModel->index(r, 1)).isValid()) {
             continue;
         }
-        auto entry = new Entry();
+        Entry* entry = new Entry();
         entry->setUuid(QUuid::createUuid());
         entry->setGroup(splitGroups(m_parserModel->data(m_parserModel->index(r, 0)).toString()));
         entry->setTitle(m_parserModel->data(m_parserModel->index(r, 1)).toString());
@@ -323,7 +325,7 @@ Group* CsvImportWidget::splitGroups(const QString& label)
     for (const QString& groupName : groupList) {
         Group* children = hasChildren(current, groupName);
         if (children == nullptr) {
-            auto brandNew = new Group();
+            Group* brandNew = new Group();
             brandNew->setParent(current);
             brandNew->setName(groupName);
             brandNew->setUuid(QUuid::createUuid());

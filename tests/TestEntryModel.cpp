@@ -42,23 +42,23 @@ void TestEntryModel::initTestCase()
 
 void TestEntryModel::test()
 {
-    auto group1 = new Group();
-    auto group2 = new Group();
+    Group* group1 = new Group();
+    Group* group2 = new Group();
 
-    auto entry1 = new Entry();
+    Entry* entry1 = new Entry();
     entry1->setGroup(group1);
     entry1->setTitle("testTitle1");
 
-    auto entry2 = new Entry();
+    Entry* entry2 = new Entry();
     entry2->setGroup(group1);
     entry2->setTitle("testTitle2");
 
-    auto model = new EntryModel(this);
+    EntryModel* model = new EntryModel(this);
 
     QSignalSpy spyAboutToBeMoved(model, SIGNAL(rowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)));
     QSignalSpy spyMoved(model, SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)));
 
-    auto modelTest = new ModelTest(model, this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     model->setGroup(group1);
 
@@ -79,7 +79,7 @@ void TestEntryModel::test()
     QSignalSpy spyAboutToRemove(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)));
     QSignalSpy spyRemoved(model, SIGNAL(rowsRemoved(QModelIndex, int, int)));
 
-    auto entry3 = new Entry();
+    Entry* entry3 = new Entry();
     entry3->setGroup(group1);
 
     QCOMPARE(spyAboutToBeMoved.count(), 0);
@@ -130,10 +130,10 @@ void TestEntryModel::test()
 
 void TestEntryModel::testAttachmentsModel()
 {
-    auto entryAttachments = new EntryAttachments(this);
+    EntryAttachments* entryAttachments = new EntryAttachments(this);
 
-    auto model = new EntryAttachmentsModel(this);
-    auto modelTest = new ModelTest(model, this);
+    EntryAttachmentsModel* model = new EntryAttachmentsModel(this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     QCOMPARE(model->rowCount(), 0);
     model->setEntryAttachments(entryAttachments);
@@ -164,7 +164,7 @@ void TestEntryModel::testAttachmentsModel()
 
     QSignalSpy spyReset(model, SIGNAL(modelReset()));
     entryAttachments->clear();
-    model->setEntryAttachments(nullptr);
+    model->setEntryAttachments(0);
     QCOMPARE(spyReset.count(), 2);
     QCOMPARE(model->rowCount(), 0);
 
@@ -175,10 +175,10 @@ void TestEntryModel::testAttachmentsModel()
 
 void TestEntryModel::testAttributesModel()
 {
-    auto entryAttributes = new EntryAttributes(this);
+    EntryAttributes* entryAttributes = new EntryAttributes(this);
 
-    auto model = new EntryAttributesModel(this);
-    auto modelTest = new ModelTest(model, this);
+    EntryAttributesModel* model = new EntryAttributesModel(this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     QCOMPARE(model->rowCount(), 0);
     model->setEntryAttributes(entryAttributes);
@@ -217,7 +217,7 @@ void TestEntryModel::testAttributesModel()
 
     QSignalSpy spyReset(model, SIGNAL(modelReset()));
     entryAttributes->clear();
-    model->setEntryAttributes(nullptr);
+    model->setEntryAttributes(0);
     QCOMPARE(spyReset.count(), 2);
     QCOMPARE(model->rowCount(), 0);
 
@@ -227,8 +227,8 @@ void TestEntryModel::testAttributesModel()
 
 void TestEntryModel::testDefaultIconModel()
 {
-    auto model = new DefaultIconModel(this);
-    auto modelTest = new ModelTest(model, this);
+    DefaultIconModel* model = new DefaultIconModel(this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     QCOMPARE(model->rowCount(), databaseIcons()->count());
 
@@ -238,8 +238,8 @@ void TestEntryModel::testDefaultIconModel()
 
 void TestEntryModel::testCustomIconModel()
 {
-    auto model = new CustomIconModel(this);
-    auto modelTest = new ModelTest(model, this);
+    CustomIconModel* model = new CustomIconModel(this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     QCOMPARE(model->rowCount(), 0);
 
@@ -264,12 +264,12 @@ void TestEntryModel::testCustomIconModel()
 
 void TestEntryModel::testAutoTypeAssociationsModel()
 {
-    auto model = new AutoTypeAssociationsModel(this);
-    auto modelTest = new ModelTest(model, this);
+    AutoTypeAssociationsModel* model = new AutoTypeAssociationsModel(this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     QCOMPARE(model->rowCount(), 0);
 
-    auto associations = new AutoTypeAssociations(this);
+    AutoTypeAssociations* associations = new AutoTypeAssociations(this);
     model->setAutoTypeAssociations(associations);
 
     QCOMPARE(model->rowCount(), 0);
@@ -300,24 +300,28 @@ void TestEntryModel::testAutoTypeAssociationsModel()
 
 void TestEntryModel::testProxyModel()
 {
-    auto modelSource = new EntryModel(this);
-    auto modelProxy = new SortFilterHideProxyModel(this);
+    EntryModel* modelSource = new EntryModel(this);
+    SortFilterHideProxyModel* modelProxy = new SortFilterHideProxyModel(this);
     modelProxy->setSourceModel(modelSource);
 
-    auto modelTest = new ModelTest(modelProxy, this);
+    ModelTest* modelTest = new ModelTest(modelProxy, this);
 
-    auto db = new Database();
-    auto entry = new Entry();
+    Database* db = new Database();
+    Entry* entry = new Entry();
     entry->setTitle("Test Title");
     entry->setGroup(db->rootGroup());
 
     modelSource->setGroup(db->rootGroup());
 
-    // Test hiding and showing a column
-    auto columnCount = modelProxy->columnCount();
+    /**
+     * @author Fonic <https://github.com/fonic>
+     * Update comparison value of modelProxy->columnCount() to account for
+     * additional columns 'Password', 'Notes', 'Expires', 'Created', 'Modified',
+     * 'Accessed', 'Paperclip', 'Attachments', and TOTP
+     */
     QSignalSpy spyColumnRemove(modelProxy, SIGNAL(columnsAboutToBeRemoved(QModelIndex, int, int)));
     modelProxy->hideColumn(0, true);
-    QCOMPARE(modelProxy->columnCount(), columnCount - 1);
+    QCOMPARE(modelProxy->columnCount(), 14);
     QVERIFY(!spyColumnRemove.isEmpty());
 
     int oldSpyColumnRemoveSize = spyColumnRemove.size();
@@ -331,9 +335,15 @@ void TestEntryModel::testProxyModel()
     entryList << entry;
     modelSource->setEntries(entryList);
 
+    /**
+     * @author Fonic <https://github.com/fonic>
+     * Update comparison value of modelProxy->columnCount() to account for
+     * additional columns 'Password', 'Notes', 'Expires', 'Created', 'Modified',
+     * 'Accessed', 'Paperclip', 'Attachments', and TOTP
+     */
     QSignalSpy spyColumnInsert(modelProxy, SIGNAL(columnsAboutToBeInserted(QModelIndex, int, int)));
     modelProxy->hideColumn(0, false);
-    QCOMPARE(modelProxy->columnCount(), columnCount);
+    QCOMPARE(modelProxy->columnCount(), 15);
     QVERIFY(!spyColumnInsert.isEmpty());
 
     int oldSpyColumnInsertSize = spyColumnInsert.size();
@@ -348,18 +358,18 @@ void TestEntryModel::testProxyModel()
 
 void TestEntryModel::testDatabaseDelete()
 {
-    auto model = new EntryModel(this);
-    auto modelTest = new ModelTest(model, this);
+    EntryModel* model = new EntryModel(this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
-    auto db1 = new Database();
-    auto group1 = new Group();
+    Database* db1 = new Database();
+    Group* group1 = new Group();
     group1->setParent(db1->rootGroup());
 
-    auto entry1 = new Entry();
+    Entry* entry1 = new Entry();
     entry1->setGroup(group1);
 
-    auto db2 = new Database();
-    auto entry2 = new Entry();
+    Database* db2 = new Database();
+    Entry* entry2 = new Entry();
     entry2->setGroup(db2->rootGroup());
 
     model->setEntries(QList<Entry*>() << entry1 << entry2);

@@ -35,35 +35,35 @@ void TestGroupModel::initTestCase()
 
 void TestGroupModel::test()
 {
-    auto db = new Database();
+    Database* db = new Database();
 
     Group* groupRoot = db->rootGroup();
     groupRoot->setObjectName("groupRoot");
     groupRoot->setName("groupRoot");
 
-    auto group1 = new Group();
+    Group* group1 = new Group();
     group1->setObjectName("group1");
     group1->setName("group1");
     group1->setParent(groupRoot);
 
-    auto group11 = new Group();
+    Group* group11 = new Group();
     group1->setObjectName("group11");
     group11->setName("group11");
     group11->setParent(group1);
 
-    auto group12 = new Group();
+    Group* group12 = new Group();
     group1->setObjectName("group12");
     group12->setName("group12");
     group12->setParent(group1);
 
-    auto group121 = new Group();
+    Group* group121 = new Group();
     group1->setObjectName("group121");
     group121->setName("group121");
     group121->setParent(group12);
 
-    auto model = new GroupModel(db, this);
+    GroupModel* model = new GroupModel(db, this);
 
-    auto modelTest = new ModelTest(model, this);
+    ModelTest* modelTest = new ModelTest(model, this);
 
     QModelIndex indexRoot = model->index(0, 0);
     QModelIndex index1 = model->index(0, 0, indexRoot);
@@ -90,7 +90,7 @@ void TestGroupModel::test()
     QSignalSpy spyAboutToMove(model, SIGNAL(rowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)));
     QSignalSpy spyMoved(model, SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)));
 
-    auto group2 = new Group();
+    Group* group2 = new Group();
     group2->setObjectName("group2");
     group2->setName("group2");
     group2->setParent(groupRoot);

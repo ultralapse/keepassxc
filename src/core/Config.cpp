@@ -104,6 +104,7 @@ static const QHash<Config::ConfigKey, ConfigDirective> configStrings = {
     {Config::GUI_MinimizeOnClose, {QS("GUI/MinimizeOnClose"), Roaming, false}},
     {Config::GUI_HideUsernames, {QS("GUI/HideUsernames"), Roaming, false}},
     {Config::GUI_HidePasswords, {QS("GUI/HidePasswords"), Roaming, true}},
+    {Config::GUI_AdvancedSettings, {QS("GUI/AdvancedSettings"), Roaming, false}},
     {Config::GUI_ColorPasswords, {QS("GUI/ColorPasswords"), Roaming, false}},
     {Config::GUI_MonospaceNotes, {QS("GUI/MonospaceNotes"), Roaming, false}},
     {Config::GUI_ApplicationTheme, {QS("GUI/ApplicationTheme"), Roaming, QS("auto")}},
@@ -144,6 +145,7 @@ static const QHash<Config::ConfigKey, ConfigDirective> configStrings = {
     {Config::Security_NoConfirmMoveEntryToRecycleBin,{QS("Security/NoConfirmMoveEntryToRecycleBin"), Roaming, true}},
     {Config::Security_EnableCopyOnDoubleClick,{QS("Security/EnableCopyOnDoubleClick"), Roaming, false}},
     {Config::Security_QuickUnlock, {QS("Security/QuickUnlock"), Local, true}},
+    {Config::Security_QuickUnlockRemember, {QS("Security/QuickUnlockRemember"), Local, true}},
 
     // Browser
     {Config::Browser_Enabled, {QS("Browser/Enabled"), Roaming, false}},
@@ -155,7 +157,6 @@ static const QHash<Config::ConfigKey, ConfigDirective> configStrings = {
     {Config::Browser_UseCustomProxy, {QS("Browser/UseCustomProxy"), Roaming, false}},
     {Config::Browser_CustomProxyLocation, {QS("Browser/CustomProxyLocation"), Roaming, {}}},
     {Config::Browser_UpdateBinaryPath, {QS("Browser/UpdateBinaryPath"), Roaming, true}},
-    {Config::Browser_AllowGetDatabaseEntriesRequest, {QS("Browser/AllowGetDatabaseEntriesRequest"), Roaming, false}},
     {Config::Browser_AllowExpiredCredentials, {QS("Browser/AllowExpiredCredentials"), Roaming, false}},
     {Config::Browser_AlwaysAllowAccess, {QS("Browser/AlwaysAllowAccess"), Roaming, false}},
     {Config::Browser_AlwaysAllowUpdate, {QS("Browser/AlwaysAllowUpdate"), Roaming, false}},
@@ -370,10 +371,7 @@ static const QHash<QString, Config::ConfigKey> deprecationMap = {
     {QS("UseTouchID"), Config::Deleted},
     {QS("Security/ResetTouchId"), Config::Deleted},
     {QS("Security/ResetTouchIdTimeout"), Config::Deleted},
-    {QS("Security/ResetTouchIdScreenlock"), Config::Deleted},
-
-    // 2.8.0
-    {QS("GUI/AdvancedSettings"), Config::Deleted}};
+    {QS("Security/ResetTouchIdScreenlock"), Config::Deleted}};
 
 /**
  * Migrate settings from previous versions.
@@ -458,7 +456,9 @@ Config::Config(QObject* parent)
     init(configFiles.first, configFiles.second);
 }
 
-Config::~Config() = default;
+Config::~Config()
+{
+}
 
 void Config::init(const QString& configFileName, const QString& localConfigFileName)
 {
@@ -471,28 +471,6 @@ void Config::init(const QString& configFileName, const QString& localConfigFileN
         QFile::remove(localConfigFileName);
         QDir().rmdir(QFileInfo(localConfigFileName).absolutePath());
     }
-
-#if defined(Q_OS_LINUX)
-    // Upgrade from previous KeePassXC version which stores its config
-    // in ~/.cache on Linux instead of ~/.local/state.
-    // Move file to correct location before continuing.
-    if (!QFile::exists(localConfigFileName)) {
-        QString oldLocalConfigPath =
-            QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/keepassxc";
-        QString suffix;
-#ifdef QT_DEBUG
-        suffix = "_debug";
-#endif
-        oldLocalConfigPath += QString("/keepassxc%1.ini").arg(suffix);
-        oldLocalConfigPath = QDir::toNativeSeparators(oldLocalConfigPath);
-        if (QFile::exists(oldLocalConfigPath)) {
-            QDir().mkpath(QFileInfo(localConfigFileName).absolutePath());
-            QFile::copy(oldLocalConfigPath, localConfigFileName);
-            QFile::remove(oldLocalConfigPath);
-            QDir().rmdir(QFileInfo(oldLocalConfigPath).absolutePath());
-        }
-    }
-#endif
 
     m_settings.reset(new QSettings(configFileName, QSettings::IniFormat));
     if (!localConfigFileName.isEmpty() && configFileName != localConfigFileName) {
@@ -534,16 +512,7 @@ QPair<QString, QString> Config::defaultConfigFiles()
 #else
     // On case-sensitive Operating Systems, force use of lowercase app directories
     configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/keepassxc";
-    // Qt does not support XDG_STATE_HOME yet, change this once XDG_STATE_HOME is added
-    QString xdgStateHome = QFile::decodeName(qgetenv("XDG_STATE_HOME"));
-    if (!xdgStateHome.startsWith(u'/')) {
-        xdgStateHome.clear(); // spec says relative paths should be ignored
-    }
-    if (xdgStateHome.isEmpty()) {
-        xdgStateHome = QDir::homePath() + "/.local/state";
-    }
-
-    localConfigPath = xdgStateHome + "/keepassxc";
+    localConfigPath = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/keepassxc";
 #endif
 
     QString suffix;

@@ -32,7 +32,7 @@ class CloneDialog : public QDialog
 
 public:
     explicit CloneDialog(DatabaseWidget* parent = nullptr, Database* db = nullptr, Entry* entry = nullptr);
-    ~CloneDialog() override;
+    ~CloneDialog();
 
 signals:
     void entryCloned(Entry* clone);

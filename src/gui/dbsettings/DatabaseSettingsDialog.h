@@ -41,7 +41,9 @@ namespace Ui
 class IDatabaseSettingsPage
 {
 public:
-    virtual ~IDatabaseSettingsPage() = default;
+    virtual ~IDatabaseSettingsPage()
+    {
+    }
     virtual QString name() = 0;
     virtual QIcon icon() = 0;
     virtual QWidget* createWidget() = 0;
@@ -69,6 +71,7 @@ private slots:
     void save();
     void reject();
     void pageChanged();
+    void toggleAdvancedMode(bool advanced);
 
 private:
     enum Page

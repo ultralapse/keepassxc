@@ -33,7 +33,9 @@ YubiKeyEditWidget::YubiKeyEditWidget(QWidget* parent)
     connect(YubiKey::instance(), SIGNAL(detectComplete(bool)), SLOT(hardwareKeyResponse(bool)), Qt::QueuedConnection);
 }
 
-YubiKeyEditWidget::~YubiKeyEditWidget() = default;
+YubiKeyEditWidget::~YubiKeyEditWidget()
+{
+}
 
 bool YubiKeyEditWidget::addToCompositeKey(QSharedPointer<CompositeKey> key)
 {

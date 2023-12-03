@@ -1,4 +1,4 @@
-#  Copyright (C) 2023 KeePassXC Team <team@keepassxc.org>
+#  Copyright (C) 2018 KeePassXC Team <team@keepassxc.org>
 #  Copyright (C) 2010 Felix Geyer <debfx@fobos.de>
 #
 #  This program is free software: you can redistribute it and/or modify
@@ -60,7 +60,6 @@ set(keepassx_SOURCES
         core/TimeInfo.cpp
         core/Tools.cpp
         core/Translator.cpp
-        core/UrlTools.cpp
         cli/Utils.cpp
         cli/TextStream.cpp
         crypto/Crypto.cpp
@@ -259,7 +258,6 @@ set(keepassx_SOURCES_MAINEXE main.cpp)
 add_feature_info(Auto-Type WITH_XC_AUTOTYPE "Automatic password typing")
 add_feature_info(Networking WITH_XC_NETWORKING "Compile KeePassXC with network access code (e.g. for downloading website icons)")
 add_feature_info(KeePassXC-Browser WITH_XC_BROWSER "Browser integration with KeePassXC-Browser")
-add_feature_info(Passkeys WITH_XC_BROWSER_PASSKEYS "Passkeys support for browser integration")
 add_feature_info(SSHAgent WITH_XC_SSHAGENT "SSH agent integration compatible with KeeAgent")
 add_feature_info(KeeShare WITH_XC_KEESHARE "Sharing integration with KeeShare")
 add_feature_info(YubiKey WITH_XC_YUBIKEY "YubiKey HMAC-SHA1 challenge-response")
@@ -272,21 +270,10 @@ add_subdirectory(browser)
 add_subdirectory(proxy)
 if(WITH_XC_BROWSER)
     set(keepassxcbrowser_LIB keepassxcbrowser)
-    set(keepassx_SOURCES ${keepassx_SOURCES}
-            gui/dbsettings/DatabaseSettingsWidgetBrowser.cpp
-            gui/entry/EntryURLModel.cpp
-            gui/reports/ReportsWidgetBrowserStatistics.cpp
-            gui/reports/ReportsPageBrowserStatistics.cpp)
-endif()
-
-if(WITH_XC_BROWSER_PASSKEYS)
-    set(keepassx_SOURCES ${keepassx_SOURCES}
-            gui/reports/ReportsWidgetPasskeys.cpp
-            gui/reports/ReportsPagePasskeys.cpp
-            gui/passkeys/PasskeyExporter.cpp
-            gui/passkeys/PasskeyExportDialog.cpp
-            gui/passkeys/PasskeyImporter.cpp
-            gui/passkeys/PasskeyImportDialog.cpp)
+    set(keepassx_SOURCES ${keepassx_SOURCES} gui/dbsettings/DatabaseSettingsWidgetBrowser.cpp)
+    set(keepassx_SOURCES ${keepassx_SOURCES} gui/entry/EntryURLModel.cpp)
+    set(keepassx_SOURCES ${keepassx_SOURCES} gui/reports/ReportsWidgetBrowserStatistics.cpp)
+    set(keepassx_SOURCES ${keepassx_SOURCES} gui/reports/ReportsPageBrowserStatistics.cpp)
 endif()
 
 add_subdirectory(autotype)
@@ -327,14 +314,14 @@ if(WIN32)
 endif()
 
 if(WITH_XC_YUBIKEY)
-    list(APPEND keepassx_SOURCES
+    list(APPEND keepassx_SOURCES 
         keys/drivers/YubiKey.h
-        keys/drivers/YubiKey.cpp
-        keys/drivers/YubiKeyInterface.cpp
-        keys/drivers/YubiKeyInterfaceUSB.cpp
+        keys/drivers/YubiKey.cpp 
+        keys/drivers/YubiKeyInterface.cpp 
+        keys/drivers/YubiKeyInterfaceUSB.cpp 
         keys/drivers/YubiKeyInterfacePCSC.cpp)
 else()
-    list(APPEND keepassx_SOURCES
+    list(APPEND keepassx_SOURCES 
         keys/drivers/YubiKey.h
         keys/drivers/YubiKeyStub.cpp)
 endif()
@@ -567,5 +554,5 @@ if(WIN32)
 endif()
 
 # The install commands in this subdirectory will be executed after all the install commands in the
-# current scope are ran. It is required for correct functioning of macdeployqt.
+# current scope are ran. It is required for correct functtioning of macdeployqt.
 add_subdirectory(post_install)

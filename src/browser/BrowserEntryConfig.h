@@ -16,8 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KEEPASSXC_BROWSERENTRYCONFIG_H
-#define KEEPASSXC_BROWSERENTRYCONFIG_H
+#ifndef BROWSERENTRYCONFIG_H
+#define BROWSERENTRYCONFIG_H
 
 #include <QObject>
 #include <QSet>
@@ -55,4 +55,4 @@ private:
     QString m_realm;
 };
 
-#endif // KEEPASSXC_BROWSERENTRYCONFIG_H
+#endif // BROWSERENTRYCONFIG_H

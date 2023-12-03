@@ -1,6 +1,6 @@
 /*
- *  Copyright (C) 2023 KeePassXC Team <team@keepassxc.org>
  *  Copyright (C) 2014 Felix Geyer <debfx@fobos.de>
+ *  Copyright (C) 2020 KeePassXC Team <team@keepassxc.org>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@
 #include "URLEdit.h"
 
 #include "core/Tools.h"
-#include "core/UrlTools.h"
 #include "gui/Icons.h"
 #include "gui/styles/StateColorPalette.h"
 
@@ -45,7 +44,7 @@ void URLEdit::updateStylesheet()
 {
     const QString stylesheetTemplate("QLineEdit { background: %1; }");
 
-    if (!urlTools()->isUrlValid(text())) {
+    if (!Tools::checkUrlValid(text())) {
         StateColorPalette statePalette;
         QColor color = statePalette.color(StateColorPalette::ColorRole::Error);
         setStyleSheet(stylesheetTemplate.arg(color.name()));

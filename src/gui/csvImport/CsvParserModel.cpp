@@ -26,7 +26,9 @@ CsvParserModel::CsvParserModel(QObject* parent)
 {
 }
 
-CsvParserModel::~CsvParserModel() = default;
+CsvParserModel::~CsvParserModel()
+{
+}
 
 void CsvParserModel::setFilename(const QString& filename)
 {
@@ -117,12 +119,12 @@ int CsvParserModel::columnCount(const QModelIndex& parent) const
 QVariant CsvParserModel::data(const QModelIndex& index, int role) const
 {
     if ((index.column() >= m_columnHeader.size()) || (index.row() + m_skipped >= rowCount()) || !index.isValid()) {
-        return {};
+        return QVariant();
     }
     if (role == Qt::DisplayRole) {
         return m_table.at(index.row() + m_skipped).at(m_columnMap[index.column()]);
     }
-    return {};
+    return QVariant();
 }
 
 QVariant CsvParserModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -130,15 +132,15 @@ QVariant CsvParserModel::headerData(int section, Qt::Orientation orientation, in
     if (role == Qt::DisplayRole) {
         if (orientation == Qt::Horizontal) {
             if ((section < 0) || (section >= m_columnHeader.size())) {
-                return {};
+                return QVariant();
             }
             return m_columnHeader.at(section);
         } else if (orientation == Qt::Vertical) {
             if (section + m_skipped >= rowCount()) {
-                return {};
+                return QVariant();
             }
             return QString::number(section + 1);
         }
     }
-    return {};
+    return QVariant();
 }

@@ -39,7 +39,7 @@ class DatabaseOpenWidget : public DialogyWidget
 
 public:
     explicit DatabaseOpenWidget(QWidget* parent = nullptr);
-    ~DatabaseOpenWidget() override;
+    ~DatabaseOpenWidget();
     void load(const QString& filename);
     QString filename();
     void clearForms();

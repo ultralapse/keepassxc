@@ -35,7 +35,9 @@ OpVaultReader::OpVaultReader(QObject* parent)
 {
 }
 
-OpVaultReader::~OpVaultReader() = default;
+OpVaultReader::~OpVaultReader()
+{
+}
 
 Database* OpVaultReader::readDatabase(QDir& opdataDir, const QString& password)
 {
@@ -299,11 +301,11 @@ QJsonObject OpVaultReader::readAndAssertJsonFile(QFile& file, const QString& str
     auto absFilePath = fileInfo.absoluteFilePath();
     if (!fileInfo.exists()) {
         qCritical() << QString("File \"%1\" must exist").arg(absFilePath);
-        return {};
+        return QJsonObject();
     }
     if (!fileInfo.isReadable()) {
         qCritical() << QString("File \"%1\" must be readable").arg(absFilePath);
-        return {};
+        return QJsonObject();
     }
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -329,7 +331,7 @@ QJsonObject OpVaultReader::readAndAssertJsonFile(QFile& file, const QString& str
     QJsonDocument jDoc = QJsonDocument::fromJson(filePayload, error);
     if (!jDoc.isObject()) {
         qCritical() << "Expected " << filePayload << "to be a JSON Object";
-        return {};
+        return QJsonObject();
     }
     return jDoc.object();
 }

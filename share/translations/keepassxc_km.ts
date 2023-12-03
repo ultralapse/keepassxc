@@ -15,7 +15,7 @@
     </message>
     <message>
         <source>KeePassXC is distributed under the terms of the GNU General Public License (GPL) version 2 or (at your option) version 3.</source>
-        <translation>KeePassXC ត្រូវបានចែកចាយ តាមលក្ខន្តិកៈរបស់ GNU General Public License (GPL) កំណែទី២។ </translation>
+        <translation>KeePassXC ត្រូវបានចែកចាយ តាមលក្ខន្តិកៈរបស់ GNU General Public License (GPL) កំណែទី2 ឬ (តាមជម្រើសរបស់អ្នក) កំណែទី3។ </translation>
     </message>
     <message>
         <source>Project Maintainers:</source>
@@ -39,7 +39,7 @@
     </message>
     <message>
         <source>Include the following information whenever you report a bug:</source>
-        <translation>បញ្ចុលពត៌មានខាងក្រោមនៅពេលអ្នករាយការណ៍ពីកំហុស</translation>
+        <translation>រួមមានពត៌មានខាងក្រោមនៅពេលអ្នករាយការណ៍ពីបញ្ហា៖</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
@@ -70,19 +70,15 @@
     </message>
     <message>
         <source>Executable</source>
-        <translation>ប្រតិបត្តិ</translation>
+        <translation>អនុវត្តន៍បាន</translation>
     </message>
     <message>
         <source>Command Line</source>
-        <translation>Command Line</translation>
+        <translation>ឃ្លាបញ្ជារ</translation>
     </message>
     <message>
         <source>Details</source>
         <translation>ព័ត៌មានលម្អិត</translation>
-    </message>
-    <message>
-        <source>Your decision will be remembered for the duration while both the requesting client AND KeePassXC are running.</source>
-        <translation>ការសម្រេចចិត្តរបស់អ្នកនឹងត្រូវបានចងចាំសម្រាប់រយៈពេលខណៈពេលដែលទាំងអតិថិជនស្នើសុំ និង KeePassXC កំពុងដំណើរការ។</translation>
     </message>
     <message>
         <source>Remember</source>
@@ -93,12 +89,16 @@
         <translation>អនុញ្ញាតឱ្យជ្រើសរើស</translation>
     </message>
     <message>
+        <source>Your decision will be remembered for the duration while both the requesting client AND KeePassXC are running.</source>
+        <translation>ការសម្រេចចិត្តរបស់អ្នកនឹងត្រូវបានចងចាំសម្រាប់រយៈពេលខណៈពេលដែលទាំងអតិថិជនស្នើសុំ និង KeePassXC កំពុងដំណើរការ។</translation>
+    </message>
+    <message>
         <source>Deny All &amp;&amp; Future</source>
         <translation>បដិសេធទាំងអស់ &amp;&amp; អនាគត</translation>
     </message>
     <message>
         <source>Allow All &amp;&amp; &amp;Future</source>
-        <translation>អនុញ្ញាតទាំងអស់ និងអនាគត</translation>
+        <translation>អនុញ្ញាតទាំងអស់ &amp;&amp; &amp;អនាគត</translation>
     </message>
 </context>
 <context>
@@ -120,11 +120,7 @@
     </message>
     <message>
         <source>Use OpenSSH</source>
-        <translation>ការប្រើ SSH ដោយចំហរ</translation>
-    </message>
-    <message>
-        <source>Use both agents</source>
-        <translation>ប្រើភ្នាក់ងារទាំងពីរ។ </translation>
+        <translation>ការប្រើ OpenSSH</translation>
     </message>
     <message>
         <source>SSH_AUTH_SOCK override</source>
@@ -154,6 +150,10 @@
         <source>SSH Agent connection is working!</source>
         <translation>ការតភ្ជាប់របស់ភ្នាក់ងារ SHH កំពុងដំណើរការហើយ!</translation>
     </message>
+    <message>
+        <source>Use both agents</source>
+        <translation>ប្រើភ្នាក់ងារទាំងពីរ។ </translation>
+    </message>
 </context>
 <context>
     <name>ApplicationSettingsWidget</name>
@@ -170,16 +170,12 @@
         <translation>សន្តិសុខ</translation>
     </message>
     <message>
-        <source>This setting cannot be enabled when minimize on unlock is enabled.</source>
-        <translation>ការកំណត់នេះមិនអាចដំណើរការទេ កាលណាដំណើរការមុខងារ minimize on unlock ។ </translation>
-    </message>
-    <message>
         <source>Access error for config file %1</source>
         <translation>កំហុសពេលចូលប្រើ ដោយសារឯកសារប្រមូលបាន ១% </translation>
     </message>
     <message>
         <source>Icon only</source>
-        <translation>តែរូបតំណាងទេ</translation>
+        <translation>តែរូបតំណាងប៉ុណ្ណោះ</translation>
     </message>
     <message>
         <source>Text only</source>
@@ -199,7 +195,7 @@
     </message>
     <message>
         <source>Monochrome</source>
-        <translation>ពណ៌តែមួយ</translation>
+        <translation>មួយពណ៌</translation>
     </message>
     <message>
         <source>Monochrome (light)</source>
@@ -228,6 +224,10 @@
     <message>
         <source>Select backup storage directory</source>
         <translation>ជ្រើសរើសការបម្រុងទុកបញ្ចីផ្ទុក</translation>
+    </message>
+    <message>
+        <source>This setting cannot be enabled when minimize on unlock is enabled.</source>
+        <translation>ការកំណត់នេះមិនអាចដំណើរការទេ កាលណាដំណើរការមុខងារ minimize on unlock ។ </translation>
     </message>
 </context>
 <context>
@@ -259,10 +259,6 @@
     <message>
         <source>Remember previously used databases</source>
         <translation>ចំណាំឃ្លាំងទិន្នន័យដែលធ្លាបប្រើពីមុន។ </translation>
-    </message>
-    <message>
-        <source> recent files</source>
-        <translation> ឯកសារថ្មីៗ</translation>
     </message>
     <message>
         <source>Load previously open databases on startup</source>
@@ -357,8 +353,7 @@
     </message>
     <message>
         <source>Use group icon on entry creation</source>
-        <translation>Use group icon on entry creation
-ប្រើរូបតំណាងពេលបង្កើតក្រុមថ្មី</translation>
+        <translation>ប្រើប្រាស់រូបក្រុមលើការបង្កើតទិន្នន័យបញ្ចូល</translation>
     </message>
     <message>
         <source>Minimize when opening a URL</source>
@@ -378,7 +373,7 @@
     </message>
     <message>
         <source>Favicon download timeout:</source>
-        <translation>អស់ពេលក្នុងការទាញយករូបតំណាង</translation>
+        <translation>កំណត់ពេលក្នុងការទាញយករូបតំណាង</translation>
     </message>
     <message>
         <source>Website icon download timeout in seconds</source>
@@ -416,10 +411,6 @@
     <message>
         <source>Toolbar button style:</source>
         <translation>ស្ទីលប៊ូតុងរបារឧបករណ៍៖</translation>
-    </message>
-    <message>
-        <source>Show passwords in color</source>
-        <translation>ការបង្ហាញពាក្យសម្ងាត់ជាពណ៌</translation>
     </message>
     <message>
         <source>Use monospaced font for notes</source>
@@ -500,11 +491,19 @@
     </message>
     <message>
         <source>Auto-type character typing delay milliseconds</source>
-        <translation>ការពន្យារពេលការសរសេរតួអក្សរនៃការសរសេរចូលដោយស្វ័យប្រវត្តិ</translation>
+        <translation>ការពន្យារពេលមីលីវិនាទីនៃការសរសេរតួអក្សររបស់ការសរសេរចូលដោយស្វ័យប្រវត្តិ</translation>
     </message>
     <message>
         <source>Remember last typed entry for:</source>
         <translation>ចងចាំការបញ្ចូលដោយសរសេរចុងក្រោយសម្រាប់:</translation>
+    </message>
+    <message>
+        <source> recent files</source>
+        <translation> ឯកសារថ្មីៗ</translation>
+    </message>
+    <message>
+        <source>Show passwords in color</source>
+        <translation>ការបង្ហាញពាក្យសម្ងាត់ជាពណ៌</translation>
     </message>
 </context>
 <context>
@@ -616,7 +615,7 @@
     </message>
     <message>
         <source>KeePassXC requires the Accessibility permission in order to perform entry level Auto-Type. If you already granted permission, you may have to restart KeePassXC.</source>
-        <translation>KeePassXC ទាមទារ​ការអនុញ្ញាត​ការ​ប្រើប្រាស់​ដើម្បី​អនុវត្ត​កម្រិត​ចូល​ប្រភេទ​ស្វ័យប្រវត្តិ។ ប្រសិនបើអ្នកបានផ្តល់ការអនុញ្ញាតរួចហើយ អ្នកប្រហែលជាត្រូវចាប់ផ្តើមឡើងវិញ KeePassXC ។</translation>
+        <translation>KeePassXC ទាមទារ​ការអនុញ្ញាត​ការ​ប្រើប្រាស់​ដើម្បី​អនុវត្ត​កម្រិត​ចូល​ប្រភេទ​ស្វ័យប្រវត្តិ។ ប្រសិនបើអ្នកបានផ្តល់ការអនុញ្ញាតរួចហើយ អ្នកប្រហែលជាត្រូវចាប់ផ្តើម KeePassXC ឡើងវិញ ។</translation>
     </message>
     <message>
         <source>KeePassXC requires the Accessibility and Screen Recorder permission in order to perform global Auto-Type. Screen Recording is necessary to use the window title to find entries. If you already granted permission, you may have to restart KeePassXC.</source>
@@ -643,12 +642,8 @@
         <translation>បានរកឃើញការពន្យាពេលយូរពេក ជាអតិបរមាគឺ %1: %2</translation>
     </message>
     <message>
-        <source>Entry does not have attribute for PICKCHARS: %1</source>
-        <translation>ការបញ្ចូលមិនមានលក្ខណៈសម្រាប់ PICKCHARS៖ %1</translation>
-    </message>
-    <message>
         <source>Invalid conversion type: %1</source>
-        <translation>ការ​បម្លែង​មិន​ត្រឹមត្រូវ៖ %1</translation>
+        <translation>ប្រភេទនៃការ​បម្លែង​មិន​ត្រឹមត្រូវ៖ %1</translation>
     </message>
     <message>
         <source>Invalid conversion syntax: %1</source>
@@ -663,6 +658,10 @@
     <message>
         <source>Invalid placeholder: %1</source>
         <translation>កន្លែងរក្សាទុកមិនត្រឹមត្រូវ៖ %1</translation>
+    </message>
+    <message>
+        <source>Entry does not have attribute for PICKCHARS: %1</source>
+        <translation>ការបញ្ចូលមិនមានលក្ខណៈសម្រាប់ PICKCHARS៖ %1</translation>
     </message>
 </context>
 <context>
@@ -760,7 +759,7 @@ Ctrl+4 - ប្រើក្តារចុចនិម្មិត (វីនដ
     </message>
     <message>
         <source>Cancel</source>
-        <translation>បញ្ឈប់</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <source>Type {USERNAME}</source>
@@ -825,82 +824,26 @@ Ctrl+4 - ប្រើក្តារចុចនិម្មិត (វីនដ
         <source>Disable for this site</source>
         <translation>បិទដំណើរការសម្រាប់គេហទំព័រនេះ</translation>
     </message>
-    <message>
-        <source>Undo</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>BrowserEntrySaveDialog</name>
+    <message>
+        <source>KeePassXC-Browser Save Entry</source>
+        <translation>KeePassXC-រក្សាទុកទិន្នន័យបញ្ចូលក្នុងកម្មវិធីរុករកតាមអ៊ីនធឺណិត</translation>
+    </message>
     <message>
         <source>Ok</source>
         <translation>យល់ព្រម</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>បញ្ឈប់</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <source>You have multiple databases open.
 Please select the correct database for saving credentials.</source>
         <translation>អ្នកមានពហុមូលដ្ឋានទិន្នន័យបើក។
 សូមជ្រើសរើសមូលដ្ឋានទិន្នន័យត្រឹមត្រូវសម្រាប់ការរក្សាទុកព័ត៌មានផ្ទៀងផ្ទាត់។</translation>
-    </message>
-    <message>
-        <source>KeePassXC - Select Database</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>BrowserPasskeysConfirmationDialog</name>
-    <message>
-        <source>KeePassXC: Passkey credentials</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>បោះបង់</translation>
-    </message>
-    <message>
-        <source>Update</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Authenticate</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Register new</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Register</source>
-        <translation type="unfinished"/>
-    </message>
-    <message numerus="yes">
-        <source>Timeout in &lt;b&gt;%n&lt;/b&gt; seconds...</source>
-        <translation type="unfinished"><numerusform></numerusform></translation>
-    </message>
-    <message>
-        <source>Do you want to register Passkey for:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>%1 (%2)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Existing Passkey found.
-Do you want to register a new Passkey for:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Select the existing Passkey and press Update to replace it.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Authenticate Passkey credentials for:</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -968,8 +911,50 @@ Do you want to delete the entry?
 </translation>
     </message>
     <message>
-        <source>%1 (Passkey)</source>
-        <translation type="unfinished"/>
+        <source>Converting attributes to custom data…</source>
+        <translation>ការបំប្លែងលក្ខណៈទៅជាទិន្នន័យផ្ទាល់ខ្លួន…</translation>
+    </message>
+    <message>
+        <source>Abort</source>
+        <translation>បោះបង់</translation>
+    </message>
+    <message>
+        <source>KeePassXC: Converted KeePassHTTP attributes</source>
+        <translation>KeePassXC៖ បានបំប្លែងលក្ខណៈរបស់ KeePassHTTP</translation>
+    </message>
+    <message>
+        <source>Successfully converted attributes from %1 entry(s).
+Moved %2 keys to custom data.</source>
+        <translation>បានបំប្លែងគុណលក្ខណៈដោយជោគជ័យពីទិន្នន័យ % 1 ។
+បានផ្លាស់ទីក្តាចុច % 2 ទៅជាទិន្នន័យផ្ទាល់ខ្លួន។</translation>
+    </message>
+    <message numerus="yes">
+        <source>Successfully moved %n keys to custom data.</source>
+        <translation><numerusform>បានផ្លាស់ទីគ្រាប់ចុច %n ទៅកាន់ទិន្នន័យផ្ទាល់ខ្លួនដោយជោគជ័យ។</numerusform></translation>
+    </message>
+    <message>
+        <source>KeePassXC: No entry with KeePassHTTP attributes found!</source>
+        <translation>KeePassXC៖ រកមិនឃើញទិន្នន័យបញ្ចូលមានលក្ខណៈ KeePassHTTP ទេ!</translation>
+    </message>
+    <message>
+        <source>The active database does not contain an entry with KeePassHTTP attributes.</source>
+        <translation>មូលដ្ឋានទិន្នន័យដែលសកម្មមិនមានការបញ្ចូលទិន្ន័យដែលមានលក្ខណៈ KeePassHTTP ទេ។</translation>
+    </message>
+    <message>
+        <source>Don&apos;t show this warning again</source>
+        <translation>កុំបង្ហាញការព្រមាននេះម្តងទៀត</translation>
+    </message>
+    <message>
+        <source>KeePassXC: Legacy browser integration settings detected</source>
+        <translation>KeePassXC៖ បានរកឃើញការកំណត់ការរួមបញ្ចូលកម្មវិធីរុករកតាមអ៊ីនធឺណិតចាស់</translation>
+    </message>
+    <message>
+        <source>Your KeePassXC-Browser settings need to be moved into the database settings.
+This is necessary to maintain your current browser connections.
+Would you like to migrate your existing settings now?</source>
+        <translation>ការកំណត់កម្មវិធីរុករក​តាមអ៊ីនធឺណិតរបស់ KeePassXC របស់អ្នកចាំបាច់ត្រូវផ្លាស់ទីទៅក្នុងការកំណត់មូលដ្ឋានទិន្នន័យនេះ។
+ការធ្វើបែបនេះ គឺមានភាពចាំបាច់ដើម្បីរក្សាទុកការតភ្ជាប់កម្មវិធីរុករក​តាមអ៊ីនធឺណិតបច្ចុប្បន្នរបស់អ្នក។
+តើអ្នកចង់ផ្ទេរការកំណត់ដែលមានស្រាប់របស់អ្នកឥឡូវនេះឬទេ?</translation>
     </message>
 </context>
 <context>
@@ -1192,14 +1177,6 @@ Do you want to delete the entry?
     <message>
         <source>Select native messaging host folder location</source>
         <translation>ជ្រើសរើសទីតាំងថតម៉ាស៊ីនផ្ញើសារដើម​</translation>
-    </message>
-    <message>
-        <source>Allow keepassxc-proxy to list all entries with their title, URL and UUID in connected databases.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Allow limited access to all entries in connected databases (ignores site access restrictions)</source>
-        <translation type="unfinished"/>
     </message>
     <message>
         <source>&lt;b&gt;Warning:&lt;/b&gt; Only adjust these settings if necessary.</source>
@@ -1483,10 +1460,6 @@ Backup database located at %2</source>
         <translation>ឯកសារសោ៖</translation>
     </message>
     <message>
-        <source>&lt;p&gt;In addition to a password, you can use a secret file to enhance the security of your database. This file can be generated in your database&apos;s security settings.&lt;/p&gt;&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; your *.kdbx database file!&lt;br&gt;If you do not have a key file, leave this field empty.&lt;/p&gt;&lt;p&gt;Click for more information…&lt;/p&gt;</source>
-        <translation>&lt;p&gt;បន្ថែមពីលើពាក្យសម្ងាត់ អ្នកអាចប្រើឯកសារសម្ងាត់ ដើម្បីបង្កើនសុវត្ថិភាពមូលដ្ឋានទិន្នន័យរបស់អ្នក។ ឯកសារនេះអាចត្រូវបានបង្កើតនៅក្នុងការកំណត់សុវត្ថិភាពនៃមូលដ្ឋានទិន្នន័យរបស់អ្នក។&lt;/p&gt;&lt;p&gt;នេះ &lt;strong&gt;មិនមែនជា&lt;/strong&gt; ឯកសារមូលដ្ឋានទិន្នន័យ *.kdbx របស់អ្នកទេ!&lt;br&gt;ប្រសិនបើអ្នកមិនមានឯកសារគន្លឹះទេ សូមទុកវាលនេះឱ្យនៅទទេ។&lt;/p&gt;&lt;p&gt;ចុចសម្រាប់ព័ត៌មានបន្ថែម…&lt;/p&gt;</translation>
-    </message>
-    <message>
         <source>Key file help</source>
         <translation>ជំនួយឯកសារសោ</translation>
     </message>
@@ -1497,12 +1470,6 @@ Backup database located at %2</source>
     <message>
         <source>Hardware Key:</source>
         <translation>ឃីហាតវែរ៖</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;You can use a hardware security key such as a &lt;strong&gt;YubiKey&lt;/strong&gt; or &lt;strong&gt;OnlyKey&lt;/strong&gt; with slots configured for HMAC-SHA1.&lt;/p&gt;
-&lt;p&gt;Click for more information…&lt;/p&gt;</source>
-        <translation>&lt;p&gt;អ្នកអាចប្រើប្រាស់ឃីហាតវែរដូចជា &lt;strong&gt;YubiKey&lt;/strong&gt; ឬ &lt;strong&gt;OnlyKey&lt;/strong&gt; ជាមួយនឹងរន្ធដែលបានកំណត់រចនាសម្ព័ន្ធសម្រាប់ HMAC-SHA1។&lt;/p&gt;
-&lt;p&gt;ចុចដើម្បីទទួលបានព័ត៌មានបន្ថែម…&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Hardware key help</source>
@@ -1534,7 +1501,7 @@ Backup database located at %2</source>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>បញ្ឈប់</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <source>Unlock</source>
@@ -1588,6 +1555,10 @@ To prevent this error from appearing, you must go to &quot;Database Settings / S
         <translation>ព្យាយាមជាថ្មីដោយគ្មានពាក្យសម្ងាត់</translation>
     </message>
     <message>
+        <source>Failed to authenticate with Touch ID</source>
+        <translation>បានបរាជ័យក្នុងការផ្ទៀងផ្ទាត់ជាមួយ Touch ID</translation>
+    </message>
+    <message>
         <source>Failed to open key file: %1</source>
         <translation>បរាជ័យក្នុងការបើកឯកសារសោ៖ %1</translation>
     </message>
@@ -1637,11 +1608,25 @@ If you do not have a key file, please leave the field empty.</source>
         <translation>ជ្រើសរើសឃីហាតវែរ…</translation>
     </message>
     <message>
+        <source>&lt;p&gt;In addition to a password, you can use a secret file to enhance the security of your database. This file can be generated in your database&apos;s security settings.&lt;/p&gt;&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; your *.kdbx database file!&lt;br&gt;If you do not have a key file, leave this field empty.&lt;/p&gt;&lt;p&gt;Click for more information…&lt;/p&gt;</source>
+        <translation>&lt;p&gt;បន្ថែមពីលើពាក្យសម្ងាត់ អ្នកអាចប្រើឯកសារសម្ងាត់ ដើម្បីបង្កើនសុវត្ថិភាពមូលដ្ឋានទិន្នន័យរបស់អ្នក។ ឯកសារនេះអាចត្រូវបានបង្កើតនៅក្នុងការកំណត់សុវត្ថិភាពនៃមូលដ្ឋានទិន្នន័យរបស់អ្នក។&lt;/p&gt;&lt;p&gt;នេះ &lt;strong&gt;មិនមែនជា&lt;/strong&gt; ឯកសារមូលដ្ឋានទិន្នន័យ *.kdbx របស់អ្នកទេ!&lt;br&gt;ប្រសិនបើអ្នកមិនមានឯកសារគន្លឹះទេ សូមទុកវាលនេះឱ្យនៅទទេ។&lt;/p&gt;&lt;p&gt;ចុចសម្រាប់ព័ត៌មានបន្ថែម…&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;You can use a hardware security key such as a &lt;strong&gt;YubiKey&lt;/strong&gt; or &lt;strong&gt;OnlyKey&lt;/strong&gt; with slots configured for HMAC-SHA1.&lt;/p&gt;
+&lt;p&gt;Click for more information…&lt;/p&gt;</source>
+        <translation>&lt;p&gt;អ្នកអាចប្រើប្រាស់ឃីហាតវែរដូចជា &lt;strong&gt;YubiKey&lt;/strong&gt; ឬ &lt;strong&gt;OnlyKey&lt;/strong&gt; ជាមួយនឹងរន្ធដែលបានកំណត់រចនាសម្ព័ន្ធសម្រាប់ HMAC-SHA1។&lt;/p&gt;
+&lt;p&gt;ចុចដើម្បីទទួលបានព័ត៌មានបន្ថែម…&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>authenticate to access the database</source>
         <translation>ផ្ទៀងផ្ទាត់ដើម្បីចូលប្រើប្រាស់មូលដ្ឋានទិន្នន័យ</translation>
     </message>
     <message>
-        <source>Failed to authenticate with Quick Unlock: %1</source>
+        <source>Failed to authenticate with Windows Hello: %1</source>
+        <translation>បានបរាជ័យក្នុងការផ្ទៀងផ្ទាត់ជាមួយ Windows Hello៖ %1</translation>
+    </message>
+    <message>
+        <source>Windows Hello setup was canceled or failed. Quick unlock has not been enabled.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1654,6 +1639,10 @@ If you do not have a key file, please leave the field empty.</source>
 </context>
 <context>
     <name>DatabaseSettingsDialog</name>
+    <message>
+        <source>Advanced Settings</source>
+        <translation>ការកំណត់កម្រិតខ្ពស់</translation>
+    </message>
     <message>
         <source>General</source>
         <translation>ទូទៅ</translation>
@@ -1686,16 +1675,24 @@ If you do not have a key file, please leave the field empty.</source>
         <translation>KeePassXC-ការកំណត់កម្មវិធីរុករកតាមអ៊ីនធឺណិត</translation>
     </message>
     <message>
+        <source>Convert KeePassHTTP data</source>
+        <translation>បំប្លែងទិន្នន័យ KeePassHTTP</translation>
+    </message>
+    <message>
+        <source>Convert legacy KeePassHTTP attributes to KeePassXC-Browser compatible custom data</source>
+        <translation>បំប្លែងលក្ខណៈ KeePassHTTP ចាស់ទៅជាទិន្នន័យផ្ទាល់ខ្លួនដែលត្រូវគ្នាជាមួយកម្មវិធីរុកតាមអ៊ីនធឺណិត KeePassXC</translation>
+    </message>
+    <message>
+        <source>Refresh database root group ID</source>
+        <translation>រីហ្រេ្វសលេខសម្គាល់ក្រុមឫសមូលដ្ឋានទិន្នន័យ</translation>
+    </message>
+    <message>
         <source>Disconnect all browsers</source>
         <translation>ផ្តាច់កម្មវិធីរុករកទាំងអស់</translation>
     </message>
     <message>
         <source>Forget all site-specific settings on entries</source>
         <translation>បំភ្លេចការកំណត់គេហទំព័រជាក់លាក់ទាំងអស់នៅលើទិន្នន័យបញ្ចូល</translation>
-    </message>
-    <message>
-        <source>Refresh database root group ID</source>
-        <translation>រីហ្រេ្វសលេខសម្គាល់ក្រុមឫសមូលដ្ឋានទិន្នន័យ</translation>
     </message>
     <message>
         <source>Stored keys</source>
@@ -1792,6 +1789,16 @@ Permissions to access entries will be revoked.</source>
         <translation>មូលដ្ឋានទិន្នន័យសកម្មមិនមានទិន្នន័យដែលមានការអនុញ្ញាតទេ។</translation>
     </message>
     <message>
+        <source>Move KeePassHTTP attributes to custom data</source>
+        <translation>ផ្លាស់ទីលក្ខណៈ KeePassHTTP ទៅកាន់ទិន្នន័យផ្ទាល់ខ្លួន</translation>
+    </message>
+    <message>
+        <source>Do you really want to convert all legacy browser integration data to the latest standard?
+This is necessary to maintain compatibility with the browser plugin.</source>
+        <translation>តើ​អ្នក​ពិត​ជា​ចង់​បម្លែង​ទិន្នន័យបញ្ចូល​កម្មវិធី​រុករក​ចាស់​ៗទាំង​អស់​ទៅ​ជា​ស្តង់ដារ​ថ្មីចុង​ក្រោយ​បំផុត​ឬ?
+នេះគឺចាំបាច់ដើម្បីរក្សាភាពឆបគ្នាជាមួយកម្មវិធីជំនួយកម្មវិធីរុករក។</translation>
+    </message>
+    <message>
         <source>Refresh database ID</source>
         <translation>រីហ្រេ្វសលេខសម្គាល់មូលដ្ឋានទិន្នន័យ</translation>
     </message>
@@ -1846,6 +1853,14 @@ Are you sure you want to continue without a password?</source>
     <message>
         <source>Decryption Time:</source>
         <translation>រយៈពេលនៃការដោះការបំប្លែងកូដ៖</translation>
+    </message>
+    <message>
+        <source>Change existing decryption time</source>
+        <translation>ប្តូរពេលវេលានៃការដោះការបំប្លែងកូដដែលមានស្រាប់</translation>
+    </message>
+    <message>
+        <source>Change</source>
+        <translation>ផ្លាស់ប្តូរ</translation>
     </message>
     <message>
         <source>Decryption time in seconds</source>
@@ -1928,6 +1943,11 @@ Are you sure you want to continue without a password?</source>
         <translation>KDBX 3</translation>
     </message>
     <message>
+        <source>unchanged</source>
+        <comment>Database decryption time is unchanged</comment>
+        <translation>មិនផ្លាស់ប្តូរ</translation>
+    </message>
+    <message>
         <source>Number of rounds too high</source>
         <comment>Key transformation rounds</comment>
         <translation>ចំនួនជុំដែលខ្ពស់ពេក</translation>
@@ -1946,7 +1966,7 @@ If you keep this number, your database may take hours, days, or even longer to o
     </message>
     <message>
         <source>Cancel</source>
-        <translation>បញ្ឈប់</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <source>Number of rounds too low</source>
@@ -1978,18 +1998,6 @@ If you keep this number, your database will not be protected from brute force at
         <source> thread(s)</source>
         <comment>Threads for parallel execution (KDF settings)</comment>
         <translation><numerusform> ស្រេត</numerusform></translation>
-    </message>
-    <message>
-        <source>Encryption Settings:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Basic</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Advanced</source>
-        <translation>កម្រិតខ្ពស់</translation>
     </message>
 </context>
 <context>
@@ -2120,26 +2128,6 @@ removed from the database.</source>
 ជំនួសឱ្យការលុបវាចេញពីមូលដ្ឋានទិន្នន័យ។
 ទិន្នន័យបញ្ចូលដែលបានលុបចេញពីធុងសំរាមគឺ
 ត្រូវបានដកចេញពីមូលដ្ឋានទិន្នន័យនេះ។</translation>
-    </message>
-    <message>
-        <source>Autosave delay since last change</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Autosave delay</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Autosave delay since last change in minutes</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source> min</source>
-        <translation>នាទី</translation>
-    </message>
-    <message>
-        <source>Autosave delay since last change checkbox</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2301,18 +2289,6 @@ This is definitely a bug, please report it to the developers.</source>
         <translation>ការសរសេរឯកសារ HTML មិនបានសម្រេច។</translation>
     </message>
     <message>
-        <source>Export database to XML file</source>
-        <translation>នាំចេញឃ្លំាងទិន្នន័យទៅជាឯកសារ XML</translation>
-    </message>
-    <message>
-        <source>XML file</source>
-        <translation>ឯកសារ XML</translation>
-    </message>
-    <message>
-        <source>Writing the XML file failed</source>
-        <translation>ការសរសេរឯកសារ XML មិនបានសម្រេច</translation>
-    </message>
-    <message>
         <source>Export Confirmation</source>
         <translation>ការបញ្ជាក់នៃការនាំចេញ</translation>
     </message>
@@ -2334,13 +2310,21 @@ This is definitely a bug, please report it to the developers.</source>
         <comment>Database tab name modifier</comment>
         <translation>%1  [បានចាក់សោ]</translation>
     </message>
+    <message>
+        <source>Export database to XML file</source>
+        <translation>នាំចេញឃ្លំាងទិន្នន័យទៅជាឯកសារ XML</translation>
+    </message>
+    <message>
+        <source>XML file</source>
+        <translation>ឯកសារ XML</translation>
+    </message>
+    <message>
+        <source>Writing the XML file failed</source>
+        <translation>ការសរសេរឯកសារ XML មិនបានសម្រេច</translation>
+    </message>
 </context>
 <context>
     <name>DatabaseWidget</name>
-    <message>
-        <source>Searches and Tags</source>
-        <translation>ស្វែងរក និងថេកអោយ</translation>
-    </message>
     <message>
         <source>Searching…</source>
         <translation>ការស្វែងរក</translation>
@@ -2389,10 +2373,6 @@ This is definitely a bug, please report it to the developers.</source>
         <source>Expired entries</source>
         <translation>ទិន្នន័យបញ្ចូលបានផុតកំណត់</translation>
     </message>
-    <message numerus="yes">
-        <source>Entries expiring within %1 day(s)</source>
-        <translation><numerusform>ទិន្នន័យបញ្ចូលផុតកំណត់ក្នុងរយៈពេល %1 ថ្ងៃ</numerusform></translation>
-    </message>
     <message>
         <source>No current database.</source>
         <translation>គ្មានមូលដ្ឋានទិន្នន័យបច្ចុប្បន្ន។</translation>
@@ -2416,18 +2396,6 @@ This is definitely a bug, please report it to the developers.</source>
     <message>
         <source>No Results</source>
         <translation>គ្មាន​លទ្ធផល</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation>រក្សាទុក</translation>
-    </message>
-    <message>
-        <source>Enter a unique name or overwrite an existing search from the list:</source>
-        <translation>បញ្ចូលឈ្មោះតែមួយគត់ ឬសរសេរជាន់លើពីការស្វែងរកដែលមានស្រាប់ពីបញ្ជី៖</translation>
-    </message>
-    <message>
-        <source>Save Search</source>
-        <translation>រក្សាទុកការស្វែងរក</translation>
     </message>
     <message>
         <source>Lock Database?</source>
@@ -2518,6 +2486,26 @@ Disable safe saves and try again?</source>
     <message>
         <source>Could not find database file: %1</source>
         <translation>មិនអាចស្វែងរកឯកសារឃ្លំាងទិន្នន័យបានទេ៖ % 1</translation>
+    </message>
+    <message numerus="yes">
+        <source>Entries expiring within %1 day(s)</source>
+        <translation><numerusform>ទិន្នន័យបញ្ចូលផុតកំណត់ក្នុងរយៈពេល %1 ថ្ងៃ</numerusform></translation>
+    </message>
+    <message>
+        <source>Searches and Tags</source>
+        <translation>ស្វែងរក និងថេកអោយ</translation>
+    </message>
+    <message>
+        <source>Enter a unique name or overwrite an existing search from the list:</source>
+        <translation>បញ្ចូលឈ្មោះតែមួយគត់ ឬសរសេរជាន់លើពីការស្វែងរកដែលមានស្រាប់ពីបញ្ជី៖</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>រក្សាទុក</translation>
+    </message>
+    <message>
+        <source>Save Search</source>
+        <translation>រក្សាទុកការស្វែងរក</translation>
     </message>
 </context>
 <context>
@@ -2661,10 +2649,6 @@ Would you like to correct it?</source>
         <translation>លាក់</translation>
     </message>
     <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n ម៉ោង</numerusform></translation>
-    </message>
-    <message numerus="yes">
         <source>%n week(s)</source>
         <translation><numerusform>%n សប្តាហ៍</numerusform></translation>
     </message>
@@ -2675,6 +2659,10 @@ Would you like to correct it?</source>
     <message numerus="yes">
         <source>%n year(s)</source>
         <translation><numerusform>%n ឆ្នាំ</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n ម៉ោង</numerusform></translation>
     </message>
 </context>
 <context>
@@ -2795,18 +2783,8 @@ Would you like to correct it?</source>
         <translation>បន្ថែមការភ្ជាប់វីនដូថ្មី</translation>
     </message>
     <message>
-        <source>+</source>
-        <comment>Add item</comment>
-        <translation>+</translation>
-    </message>
-    <message>
         <source>Remove selected window association</source>
         <translation>ដកចេញការភ្ជាប់វីនដូដែលបានជ្រើសរើស</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <comment>Remove item</comment>
-        <translation>-</translation>
     </message>
     <message>
         <source>Window title:</source>
@@ -2831,6 +2809,16 @@ Would you like to correct it?</source>
     <message>
         <source>Custom Auto-Type sequence for this window</source>
         <translation>លំដាប់វាយបញ្ចូលស្វ័យប្រវត្តិជាផ្ទាល់ខ្លួន​សម្រាប់វីនដូ​នេះ</translation>
+    </message>
+    <message>
+        <source>+</source>
+        <comment>Add item</comment>
+        <translation>+</translation>
+    </message>
+    <message>
+        <source>-</source>
+        <comment>Remove item</comment>
+        <translation>-</translation>
     </message>
 </context>
 <context>
@@ -3049,6 +3037,19 @@ Would you like to correct it?</source>
         <translation>សោឯកជន</translation>
     </message>
     <message>
+        <source>External file</source>
+        <translation>ឯកសារខាងក្រៅ</translation>
+    </message>
+    <message>
+        <source>Browser for key file</source>
+        <translation>រុករកឯកសារសោ</translation>
+    </message>
+    <message>
+        <source>Browse…</source>
+        <extracomment>Button for opening file dialog</extracomment>
+        <translation>រុករក…</translation>
+    </message>
+    <message>
         <source>Attachment</source>
         <translation>ឯកសារ​ភ្ជាប់</translation>
     </message>
@@ -3063,23 +3064,6 @@ Would you like to correct it?</source>
     <message>
         <source>Remove from agent</source>
         <translation>ដកពីភ្នាក់ងារចេញ</translation>
-    </message>
-    <message>
-        <source>External file</source>
-        <translation>ឯកសារខាងក្រៅ</translation>
-    </message>
-    <message>
-        <source>Browser for key file</source>
-        <translation>រុករកឯកសារសោ</translation>
-    </message>
-    <message>
-        <source>Browse…</source>
-        <extracomment>Button for opening file dialog</extracomment>
-        <translation>រុករក…</translation>
-    </message>
-    <message>
-        <source>Generate</source>
-        <translation>បង្កើត</translation>
     </message>
     <message>
         <source>Select attachment file</source>
@@ -3117,6 +3101,10 @@ Would you like to correct it?</source>
         <translation>រូបតំណាង</translation>
     </message>
     <message>
+        <source>Browser Integration</source>
+        <translation>ការរួមបញ្ចូលកម្មវិធីរុករកតាមអ៊ីនធឺណិត</translation>
+    </message>
+    <message>
         <source>Properties</source>
         <translation>លក្ខណៈ</translation>
     </message>
@@ -3131,10 +3119,6 @@ Would you like to correct it?</source>
     <message>
         <source>Group has unsaved changes</source>
         <translation>ក្រុមដែលបានផ្លាស់ប្តូររួចមិនទាន់បានរក្សាទុកនៅឡើយទេ</translation>
-    </message>
-    <message>
-        <source>Browser Integration</source>
-        <translation>ការរួមបញ្ចូលកម្មវិធីរុករកតាមអ៊ីនធឺណិត</translation>
     </message>
     <message>
         <source>Enable</source>
@@ -3896,10 +3880,6 @@ Error: %1</source>
         <source>Has TOTP</source>
         <translation>មាន TOTP</translation>
     </message>
-    <message>
-        <source>Background Color</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>EntryPreviewWidget</name>
@@ -3920,8 +3900,8 @@ Error: %1</source>
         <translation>ពាក្យសម្ងាត់</translation>
     </message>
     <message>
-        <source>URL</source>
-        <translation>URL</translation>
+        <source>Notes</source>
+        <translation>ចំណាំ</translation>
     </message>
     <message>
         <source>Expiration</source>
@@ -3940,8 +3920,8 @@ Error: %1</source>
         <translation>ឈ្មោះអ្នកប្រើ</translation>
     </message>
     <message>
-        <source>Notes</source>
-        <translation>ចំណាំ</translation>
+        <source>URL</source>
+        <translation>URL</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -3992,16 +3972,16 @@ Error: %1</source>
         <translation>មិនធ្លាប់</translation>
     </message>
     <message>
-        <source>Double click to copy value</source>
-        <translation>ចុចពីរដងដើម្បីចម្លងតម្លៃ</translation>
-    </message>
-    <message>
         <source>Enabled</source>
         <translation>បានបើក</translation>
     </message>
     <message>
         <source>Disabled</source>
         <translation>បានបិទដំណើរការ</translation>
+    </message>
+    <message>
+        <source>Double click to copy value</source>
+        <translation>ចុចពីរដងដើម្បីចម្លងតម្លៃ</translation>
     </message>
     <message>
         <source>Double click to copy to clipboard</source>
@@ -4213,7 +4193,7 @@ This will leave your passwords and sensitive information vulnerable!
     </message>
     <message>
         <source>Cancel</source>
-        <translation>បញ្ឈប់</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <source>Having trouble downloading icons?
@@ -4918,7 +4898,7 @@ If this reoccurs, then your database file may be corrupt.</source>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>បញ្ឈប់</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <source>Key Component set, click to change or remove</source>
@@ -5080,10 +5060,6 @@ Are you sure you want to continue with this file?</source>
     <message>
         <source>TOTP</source>
         <translation>TOTP</translation>
-    </message>
-    <message>
-        <source>Tags</source>
-        <translation>ស្លាក</translation>
     </message>
     <message>
         <source>&amp;Groups</source>
@@ -5286,10 +5262,6 @@ Are you sure you want to continue with this file?</source>
         <translation>ចម្លងចំណងជើងទៅឃ្លីបបត</translation>
     </message>
     <message>
-        <source>Copy &amp;URL</source>
-        <translation>ចម្លង &amp;URL</translation>
-    </message>
-    <message>
         <source>Copy URL to clipboard</source>
         <translation>ចម្លង URL ទៅឃ្លីបបត</translation>
     </message>
@@ -5348,10 +5320,6 @@ Are you sure you want to continue with this file?</source>
     <message>
         <source>Copy &amp;TOTP</source>
         <translation>ចម្លង &amp;TOTP</translation>
-    </message>
-    <message>
-        <source>Copy Password and TOTP</source>
-        <translation>ចម្លងពាក្យសម្ងាត់ និង TOTP</translation>
     </message>
     <message>
         <source>E&amp;mpty recycle bin</source>
@@ -5450,14 +5418,6 @@ Are you sure you want to continue with this file?</source>
         <translation>ក្រុមក្លូន...</translation>
     </message>
     <message>
-        <source>&amp;XML File…</source>
-        <translation>ឯកសារ &amp;XML…</translation>
-    </message>
-    <message>
-        <source>XML File…</source>
-        <translation>ឯកសារ XML…</translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation>ជម្រះប្រវត្តិ</translation>
     </message>
@@ -5489,10 +5449,6 @@ We recommend you use the AppImage available on our downloads page.</source>
         <translation>ការព្រមាន៖ កំណែ Qt របស់អ្នកអាចបណ្តាលឱ្យ KeePassXC គាំងជាមួយនឹងក្តារចុចលើអេក្រង់។
 យើងសូមណែនាំអ្នកឱ្យប្រើប្រាស់ AppImage នេះដែលអាចប្រើប្រាស់បាននៅលើទំព័រទាញយករបស់យើង។</translation>
     </message>
-    <message>
-        <source>No Tags</source>
-        <translation>គ្មានស្លាក</translation>
-    </message>
     <message numerus="yes">
         <source>Restore Entry(s)</source>
         <translation><numerusform>ស្តារទិន្នន័យធាតុចូលឡើងវិញ</numerusform></translation>
@@ -5521,10 +5477,6 @@ We recommend you use the AppImage available on our downloads page.</source>
         <source>Quit KeePassXC</source>
         <translation>ចាកចេញពី KeePassXC</translation>
     </message>
-    <message numerus="yes">
-        <source>%1 Entry(s)</source>
-        <translation><numerusform>%1 ទិន្នន័យបញ្ចូល</numerusform></translation>
-    </message>
     <message>
         <source>Please present or touch your YubiKey to continue…</source>
         <translation>សូមបង្ហាញ ឬចុច YubiKey របស់អ្នកដើម្បីបន្ត…</translation>
@@ -5538,20 +5490,36 @@ We recommend you use the AppImage available on our downloads page.</source>
         <translation>អ្នកត្រូវតែចាប់ផ្តើមកម្មវិធីឡើងវិញ ដើម្បីដាក់ប្រើការកំណត់នេះ។ តើអ្នកចង់ចាប់ផ្តើមឡើងវិញឥឡូវនេះឬទេ?</translation>
     </message>
     <message>
+        <source>Tags</source>
+        <translation>ស្លាក</translation>
+    </message>
+    <message>
+        <source>No Tags</source>
+        <translation>គ្មានស្លាក</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Entry(s)</source>
+        <translation><numerusform>%1 ទិន្នន័យបញ្ចូល</numerusform></translation>
+    </message>
+    <message>
+        <source>Copy Password and TOTP</source>
+        <translation>ចម្លងពាក្យសម្ងាត់ និង TOTP</translation>
+    </message>
+    <message>
+        <source>&amp;XML File…</source>
+        <translation>ឯកសារ &amp;XML…</translation>
+    </message>
+    <message>
+        <source>XML File…</source>
+        <translation>ឯកសារ XML…</translation>
+    </message>
+    <message>
+        <source>Copy &amp;URL</source>
+        <translation>ចម្លង &amp;URL</translation>
+    </message>
+    <message>
         <source>Allow Screen Capture</source>
         <translation>អនុញ្ញាតឱ្យថតអេក្រង់</translation>
-    </message>
-    <message>
-        <source>Passkeys…</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Passkeys</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Import Passkey</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -5688,6 +5656,14 @@ We recommend you use the AppImage available on our downloads page.</source>
     <message>
         <source>Here you can adjust the database encryption settings. Don&apos;t worry, you can change them later in the database settings.</source>
         <translation>នៅទីនេះអ្នកអាចកែតម្រូវការកំណត់ការអ៊ិនគ្រីបមូលដ្ឋានទិន្នន័យ។ សូមកុំបារម្ភ អ្នកអាចកែប្រែរវាបាននៅពេលក្រោយក្នុងការកំណត់មូលដ្ឋានទិន្នន័យនេះ។</translation>
+    </message>
+    <message>
+        <source>Advanced Settings</source>
+        <translation>ការកំណត់កម្រិតខ្ពស់</translation>
+    </message>
+    <message>
+        <source>Simple Settings</source>
+        <translation>ការកំណត់ធម្មតា</translation>
     </message>
 </context>
 <context>
@@ -5852,10 +5828,6 @@ We recommend you use the AppImage available on our downloads page.</source>
         <translation>មិនស្គាល់លេខសម្ងាត់ៈ %1</translation>
     </message>
     <message>
-        <source>AES-256/GCM is currently not supported</source>
-        <translation>បច្ចុប្បន្ននេះ AES-256/GCM មិនប្រើប្រាស់បានទេ</translation>
-    </message>
-    <message>
         <source>Passphrase is required to decrypt this key</source>
         <translation>តម្រូវឱ្យមានឃ្លាសម្ងាត់ដើម្បីឌិគ្រីបសោនេះ។</translation>
     </message>
@@ -5919,170 +5891,9 @@ We recommend you use the AppImage available on our downloads page.</source>
         <source>Unexpected EOF when writing private key</source>
         <translation>EOFដែលមិនបានរំពឹងទុកនៅពេលសរសេរសោគន្លឹះ</translation>
     </message>
-</context>
-<context>
-    <name>OpenSSHKeyGenDialog</name>
     <message>
-        <source>SSH Key Generator</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>វាយអក្សរ</translation>
-    </message>
-    <message>
-        <source>Bits</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Comment</source>
-        <translation>មតិយោបល់</translation>
-    </message>
-</context>
-<context>
-    <name>PasskeyExportDialog</name>
-    <message>
-        <source>KeePassXC - Passkey Export</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Export the following Passkey entries.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Filenames will be generated with title and .passkey file extension.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Export entries</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Export Selected</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>បោះបង់</translation>
-    </message>
-    <message>
-        <source>Export to folder</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>PasskeyExporter</name>
-    <message>
-        <source>KeePassXC: Passkey Export</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>File &quot;%1.passkey&quot; already exists.
-Do you want to overwrite it?
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot open file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot open file &quot;%1&quot; for writing.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot write to file</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>PasskeyImportDialog</name>
-    <message>
-        <source>KeePassXC - Passkey Import</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Do you want to import the Passkey?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>URL: %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Username: %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Use default group (Imported Passkeys)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Group</source>
-        <translation>ក្រុម</translation>
-    </message>
-    <message>
-        <source>Database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Select Database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Import Passkey</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Import</source>
-        <translation>នាំចូល</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>បោះបង់</translation>
-    </message>
-    <message>
-        <source>Database: %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Group:</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>PasskeyImporter</name>
-    <message>
-        <source>Passkey file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>All files</source>
-        <translation>ឯកសារ​ទាំងអស់</translation>
-    </message>
-    <message>
-        <source>Open Passkey file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot open file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot open file &quot;%1&quot; for reading.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot import Passkey</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot import Passkey file &quot;%1&quot;. Data is missing.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Cannot import Passkey file &quot;%1&quot;. Private key is missing or malformed.</source>
-        <translation type="unfinished"/>
+        <source>AES-256/GCM is currently not supported</source>
+        <translation>បច្ចុប្បន្ននេះ AES-256/GCM មិនប្រើប្រាស់បានទេ</translation>
     </message>
 </context>
 <context>
@@ -6264,10 +6075,6 @@ Do you want to overwrite it?
         <translation>ក៏អាចជ្រើសរើសពី៖</translation>
     </message>
     <message>
-        <source>Excluded characters: &quot;0&quot;, &quot;1&quot;, &quot;l&quot;, &quot;I&quot;, &quot;O&quot;, &quot;|&quot;, &quot;﹒&quot;</source>
-        <translation>មិនរាប់បញ្ចូលតួអក្សរ៖ &quot;0&quot;, &quot;1&quot;, &quot;l&quot;, &quot;I&quot;, &quot;O&quot;, &quot;|&quot;, &quot;﹒&quot;</translation>
-    </message>
-    <message>
         <source>Exclude look-alike characters</source>
         <translation>មិនរាប់បញ្ចូលតួអក្សរដែលមានលក្ខណៈស្រដៀងគ្នា</translation>
     </message>
@@ -6348,30 +6155,6 @@ Do you want to overwrite it?
         <translation>ការវាស់វែងពាក្យសម្ងាត់៖ %1 ប៊ីត</translation>
     </message>
     <message>
-        <source>Password Quality: %1</source>
-        <translation>គុណភាពពាក្យសម្ងាត់៖ % 1</translation>
-    </message>
-    <message>
-        <source>Poor</source>
-        <comment>Password quality</comment>
-        <translation>ខ្សោយ</translation>
-    </message>
-    <message>
-        <source>Weak</source>
-        <comment>Password quality</comment>
-        <translation>ខ្សោយ</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <comment>Password quality</comment>
-        <translation>ល្អ</translation>
-    </message>
-    <message>
-        <source>Excellent</source>
-        <comment>Password quality</comment>
-        <translation>ល្អឥតខ្ចោះ</translation>
-    </message>
-    <message>
         <source>Confirm Delete Wordlist</source>
         <translation>បញ្ជាក់ការលុបបញ្ជីពាក្យ</translation>
     </message>
@@ -6416,6 +6199,34 @@ Do you want to overwrite it?</source>
     <message>
         <source>Special Characters</source>
         <translation>តួអក្សរពិសេស</translation>
+    </message>
+    <message>
+        <source>Password Quality: %1</source>
+        <translation>គុណភាពពាក្យសម្ងាត់៖ % 1</translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <comment>Password quality</comment>
+        <translation>ខ្សោយ</translation>
+    </message>
+    <message>
+        <source>Weak</source>
+        <comment>Password quality</comment>
+        <translation>ខ្សោយ</translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <comment>Password quality</comment>
+        <translation>ល្អ</translation>
+    </message>
+    <message>
+        <source>Excellent</source>
+        <comment>Password quality</comment>
+        <translation>ល្អឥតខ្ចោះ</translation>
+    </message>
+    <message>
+        <source>Excluded characters: &quot;0&quot;, &quot;1&quot;, &quot;l&quot;, &quot;I&quot;, &quot;O&quot;, &quot;|&quot;, &quot;﹒&quot;</source>
+        <translation>មិនរាប់បញ្ចូលតួអក្សរ៖ &quot;0&quot;, &quot;1&quot;, &quot;l&quot;, &quot;I&quot;, &quot;O&quot;, &quot;|&quot;, &quot;﹒&quot;</translation>
     </message>
 </context>
 <context>
@@ -6916,22 +6727,12 @@ Do you want to overwrite it?</source>
         <translation>បានផ្តល់អំណះអំណាងច្រើនពេក។</translation>
     </message>
     <message>
-        <source>Path of the database.</source>
-        <translation>ផ្លូវមូលដ្ឋានទិន្នន័យ។</translation>
-    </message>
-    <message>
         <source>Target decryption time in MS for the database.</source>
         <translation>កំណត់ពេលវេលានៃការដោះការបំប្លែងកូដក្នុង MS សម្រាប់ឃ្លាំងផ្ទុកទិន្នន័យ។</translation>
     </message>
     <message>
         <source>time</source>
         <translation>ពេលវេលា</translation>
-    </message>
-    <message>
-        <source>Set the key file for the database.
-This options is deprecated, use --set-key-file instead.</source>
-        <translation>កំណត់ឯកសារសោសម្រាប់មូលដ្ឋានទិន្នន័យ។
-ជម្រើសនេះត្រូវបានបដិសេធ ប្រើ --កំណត-សោ-ឯកសារ ជំនួសវិញ។</translation>
     </message>
     <message>
         <source>Set the key file for the database.</source>
@@ -6944,6 +6745,10 @@ This options is deprecated, use --set-key-file instead.</source>
     <message>
         <source>Create a new database.</source>
         <translation>បង្កើតឃ្លាំងទិន្នន័យថ្មី។</translation>
+    </message>
+    <message>
+        <source>Path of the database.</source>
+        <translation>ផ្លូវមូលដ្ឋានទិន្នន័យ។</translation>
     </message>
     <message>
         <source>Invalid decryption time %1.</source>
@@ -6988,158 +6793,6 @@ This options is deprecated, use --set-key-file instead.</source>
     <message>
         <source>Successfully created new database.</source>
         <translation>បានបង្កើតឃ្លាំងទិន្នន័យថ្មីដោយជោគជ័យ។</translation>
-    </message>
-    <message>
-        <source>Unset the password for the database.</source>
-        <translation>មិនបានកំណត់ពាក្យសម្ងាត់សម្រាប់ទិន្នន័យ</translation>
-    </message>
-    <message>
-        <source>Unset the key file for the database.</source>
-        <translation>មិនបានកំណត់ឯកសារគន្លឹះសម្រាប់ទិន្នន័យ</translation>
-    </message>
-    <message>
-        <source>Edit a database.</source>
-        <translation>កែឃ្លំាងទិន្នន័យ។</translation>
-    </message>
-    <message>
-        <source>Cannot use %1 and %2 at the same time.</source>
-        <translation>មិន​អាច​ប្រើប្រាស់ % 1 និង% 2 ក្នុង​ពេល​តែ​មួយ​បាន​ទេ។</translation>
-    </message>
-    <message>
-        <source>Could not change the database key.</source>
-        <translation>មិន​អាច​កែប្រែសោ​មូលដ្ឋាន​ទិន្នន័យ​បានទេ។</translation>
-    </message>
-    <message>
-        <source>Database was not modified.</source>
-        <translation>មិនបានកែប្រែឃ្លាំងទិន្នន័យទេ។</translation>
-    </message>
-    <message>
-        <source>Writing the database failed: %1</source>
-        <translation>ការសរសេរមូលដ្ឋានទិន្នន័យមិនបានសម្រេច៖ %1</translation>
-    </message>
-    <message>
-        <source>Successfully edited the database.</source>
-        <translation>កែមូលដ្ឋានទិន្នន័យបានដោយជោគជ័យ។</translation>
-    </message>
-    <message>
-        <source>Cannot remove password: The database does not have a password.</source>
-        <translation>មិន​អាច​ដក​ពាក្យ​សម្ងាត់​ចេញបានទេ៖ មូលដ្ឋាន​ទិន្នន័យ​មិន​មាន​ពាក្យ​សម្ងាត់​ទេ។</translation>
-    </message>
-    <message>
-        <source>Cannot remove file key: The database does not have a file key.</source>
-        <translation>មិន​អាច​យក​សោឯកសារ​ចេញ៖ មូលដ្ឋាន​ទិន្នន័យ​មិន​មាន​សោឯកសារទេ។</translation>
-    </message>
-    <message>
-        <source>Loading the new key file failed: %1</source>
-        <translation>កំពុងផ្ទុកឯកសារសោថ្មីមិនបានសម្រេច៖ %1</translation>
-    </message>
-    <message>
-        <source>Found unexpected Key type %1</source>
-        <translation>បានរកឃើញប្រភេទសោដែលមានបញ្ហាដោយមិនរំពឹងទុក %1</translation>
-    </message>
-    <message>
-        <source>Cannot remove all the keys from a database.</source>
-        <translation>មិនអាចដកសោទាំងអស់ចេញពីមូលដ្ឋានទិន្នន័យបានទេ។</translation>
-    </message>
-    <message>
-        <source>Show a database&apos;s information.</source>
-        <translation>បង្ហាញព័តម៌ានទិន្នន័យ</translation>
-    </message>
-    <message>
-        <source>UUID: </source>
-        <translation>UUID៖ </translation>
-    </message>
-    <message>
-        <source>Name: </source>
-        <translation>ឈ្មោះ៖ </translation>
-    </message>
-    <message>
-        <source>Description: </source>
-        <translation>ការពិពណ៌នា៖ </translation>
-    </message>
-    <message>
-        <source>Cipher: </source>
-        <translation>Cipher៖ </translation>
-    </message>
-    <message>
-        <source>KDF: </source>
-        <translation>KDF៖ </translation>
-    </message>
-    <message>
-        <source>Recycle bin is enabled.</source>
-        <translation>ធុងសំរាមបានបើកហើយ។</translation>
-    </message>
-    <message>
-        <source>Recycle bin is not enabled.</source>
-        <translation>ធុងសំរាមមិនបានមិនទេ។</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>ទីតាំង</translation>
-    </message>
-    <message>
-        <source>Database created</source>
-        <translation>មូលដ្ឋានទិន្នន័យដែលបានបង្កើត</translation>
-    </message>
-    <message>
-        <source>Last saved</source>
-        <translation>បានរក្សាទុកចុងក្រោយ</translation>
-    </message>
-    <message>
-        <source>Unsaved changes</source>
-        <translation>ការផ្តាស់ប្តូរដែលមិនបានរក្សាទុក</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation>បាទ/ចាស</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation>ទេ</translation>
-    </message>
-    <message>
-        <source>Number of groups</source>
-        <translation>ចំនួនក្រុម</translation>
-    </message>
-    <message>
-        <source>Number of entries</source>
-        <translation>ចំនួននៃទិន្នន័យបញ្ចូល</translation>
-    </message>
-    <message>
-        <source>Number of expired entries</source>
-        <translation>ចំនួននៃទិន្នន័យបញ្ចូលបានផុតកំណត់</translation>
-    </message>
-    <message>
-        <source>Unique passwords</source>
-        <translation>ពាក្យសម្ងាត់ពិសេស</translation>
-    </message>
-    <message>
-        <source>Non-unique passwords</source>
-        <translation>សម្ងាត់មិនមានលក្ខណៈពិសេស</translation>
-    </message>
-    <message>
-        <source>Maximum password reuse</source>
-        <translation>ការប្រើប្រាស់ពាក្យសម្ងាត់ឡើងវិញអតិបរមា</translation>
-    </message>
-    <message>
-        <source>Number of short passwords</source>
-        <translation>ចំនួនពាក្យសម្ងាត់ខ្លី</translation>
-    </message>
-    <message>
-        <source>Number of weak passwords</source>
-        <translation>ចំនួនពាក្យសម្ងាត់ខ្សោយ</translation>
-    </message>
-    <message>
-        <source>Entries excluded from reports</source>
-        <translation>បានដកចេញទិន្នន័យបញ្ចូលពីរបាយការណ៍</translation>
-    </message>
-    <message>
-        <source>Average password length</source>
-        <translation>ប្រវែងពាក្យសម្ងាត់ជាមធ្យម</translation>
-    </message>
-    <message>
-        <source>%1 characters</source>
-        <translation>%1 តួអក្សរ</translation>
     </message>
     <message>
         <source>Word count for the diceware passphrase.</source>
@@ -7191,6 +6844,10 @@ This options is deprecated, use --set-key-file instead.</source>
     <message>
         <source>Enter new password for entry: </source>
         <translation>បញ្ចូលពាក្យសម្ងាត់ថ្មីសម្រាប់ទិន្នន័យបញ្ចូល៖ </translation>
+    </message>
+    <message>
+        <source>Writing the database failed: %1</source>
+        <translation>ការសរសេរមូលដ្ឋានទិន្នន័យមិនបានសម្រេច៖ %1</translation>
     </message>
     <message>
         <source>Successfully edited entry %1.</source>
@@ -7417,6 +7074,106 @@ This options is deprecated, use --set-key-file instead.</source>
         <translation>បាននាំចូលមូលដ្ឋានទិន្នន័យដោយជោគជ័យ។</translation>
     </message>
     <message>
+        <source>Show a database&apos;s information.</source>
+        <translation>បង្ហាញព័តម៌ានទិន្នន័យ</translation>
+    </message>
+    <message>
+        <source>UUID: </source>
+        <translation>UUID៖ </translation>
+    </message>
+    <message>
+        <source>Name: </source>
+        <translation>ឈ្មោះ៖ </translation>
+    </message>
+    <message>
+        <source>Description: </source>
+        <translation>ការពិពណ៌នា៖ </translation>
+    </message>
+    <message>
+        <source>Cipher: </source>
+        <translation>Cipher៖ </translation>
+    </message>
+    <message>
+        <source>KDF: </source>
+        <translation>KDF៖ </translation>
+    </message>
+    <message>
+        <source>Recycle bin is enabled.</source>
+        <translation>ធុងសំរាមបានបើកហើយ។</translation>
+    </message>
+    <message>
+        <source>Recycle bin is not enabled.</source>
+        <translation>ធុងសំរាមមិនបានមិនទេ។</translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation>ទីតាំង</translation>
+    </message>
+    <message>
+        <source>Database created</source>
+        <translation>មូលដ្ឋានទិន្នន័យដែលបានបង្កើត</translation>
+    </message>
+    <message>
+        <source>Last saved</source>
+        <translation>បានរក្សាទុកចុងក្រោយ</translation>
+    </message>
+    <message>
+        <source>Unsaved changes</source>
+        <translation>ការផ្តាស់ប្តូរដែលមិនបានរក្សាទុក</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>បាទ/ចាស</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>ទេ</translation>
+    </message>
+    <message>
+        <source>Number of groups</source>
+        <translation>ចំនួនក្រុម</translation>
+    </message>
+    <message>
+        <source>Number of entries</source>
+        <translation>ចំនួននៃទិន្នន័យបញ្ចូល</translation>
+    </message>
+    <message>
+        <source>Number of expired entries</source>
+        <translation>ចំនួននៃទិន្នន័យបញ្ចូលបានផុតកំណត់</translation>
+    </message>
+    <message>
+        <source>Unique passwords</source>
+        <translation>ពាក្យសម្ងាត់ពិសេស</translation>
+    </message>
+    <message>
+        <source>Non-unique passwords</source>
+        <translation>សម្ងាត់មិនមានលក្ខណៈពិសេស</translation>
+    </message>
+    <message>
+        <source>Maximum password reuse</source>
+        <translation>ការប្រើប្រាស់ពាក្យសម្ងាត់ឡើងវិញអតិបរមា</translation>
+    </message>
+    <message>
+        <source>Number of short passwords</source>
+        <translation>ចំនួនពាក្យសម្ងាត់ខ្លី</translation>
+    </message>
+    <message>
+        <source>Number of weak passwords</source>
+        <translation>ចំនួនពាក្យសម្ងាត់ខ្សោយ</translation>
+    </message>
+    <message>
+        <source>Entries excluded from reports</source>
+        <translation>បានដកចេញទិន្នន័យបញ្ចូលពីរបាយការណ៍</translation>
+    </message>
+    <message>
+        <source>Average password length</source>
+        <translation>ប្រវែងពាក្យសម្ងាត់ជាមធ្យម</translation>
+    </message>
+    <message>
+        <source>%1 characters</source>
+        <translation>%1 តួអក្សរ</translation>
+    </message>
+    <message>
         <source>Unknown command %1</source>
         <translation>មិនស្គាល់ពាក្យបញ្ជា %1</translation>
     </message>
@@ -7589,10 +7346,6 @@ Available commands:
         <translation>ការបង្ហាញពីគុណលក្ខណៈដែលត្រូវបានការពារជាអក្សរច្បាស់ៗ</translation>
     </message>
     <message>
-        <source>Show all the attributes of the entry.</source>
-        <translation>ការបង្ហាញពីគុណលក្ខណៈទាំងអស់នៃទិន្នន័យចូល</translation>
-    </message>
-    <message>
         <source>Show the attachments of the entry.</source>
         <translation>ការបង្ហាញឯកសារភ្ជាប់របស់ទិន្នន័យ</translation>
     </message>
@@ -7661,10 +7414,6 @@ Please consider generating a new key file.</source>
     <message>
         <source>Invalid YubiKey serial %1</source>
         <translation>លេខស៊េរី YubiKey មិនត្រឹមត្រូវ  %1</translation>
-    </message>
-    <message>
-        <source>Please present or touch your YubiKey to continue.</source>
-        <translation>សូមបង្ហាញ ឬចុច YubiKey របស់អ្នកដើម្បីបន្ត។</translation>
     </message>
     <message>
         <source>Enter password to encrypt database (optional): </source>
@@ -8107,10 +7856,6 @@ Kernel: %3 %4</source>
         <translation>ឧទាហរណ៍មួយទៀតអំពី KeePassXC គឺកំពុងដំណើរការរួចទៅហើយ។</translation>
     </message>
     <message>
-        <source>KeePassXC is not running. No open database to lock</source>
-        <translation>KeePassXC មិនកំពុងដំណើរការទេ។ មិនមានមូលដ្ឋានទិន្នន័យដែលបានបើកដើម្បីចាក់សោទេ</translation>
-    </message>
-    <message>
         <source>Fatal error while testing the cryptographic functions.</source>
         <translation>បញ្ហាធ្ងន់ធ្ងរកើតឡើងនៅពេលកំពុងតេស្តមុខងារ​គ្រីបតូសាស្ត្រ។</translation>
     </message>
@@ -8153,71 +7898,73 @@ Kernel: %3 %4</source>
         <translation>KDF មិន​ត្រឹមត្រូវ</translation>
     </message>
     <message>
-        <source>Access to all entries is denied</source>
-        <translation type="unfinished"/>
+        <source>Please present or touch your YubiKey to continue.</source>
+        <translation>សូមបង្ហាញ ឬចុច YubiKey របស់អ្នកដើម្បីបន្ត។</translation>
+    </message>
+    <message>
+        <source>Show all the attributes of the entry.</source>
+        <translation>ការបង្ហាញពីគុណលក្ខណៈទាំងអស់នៃទិន្នន័យចូល</translation>
+    </message>
+    <message>
+        <source>Edit a database.</source>
+        <translation>កែឃ្លំាងទិន្នន័យ។</translation>
+    </message>
+    <message>
+        <source>Could not change the database key.</source>
+        <translation>មិន​អាច​កែប្រែសោ​មូលដ្ឋាន​ទិន្នន័យ​បានទេ។</translation>
+    </message>
+    <message>
+        <source>Database was not modified.</source>
+        <translation>មិនបានកែប្រែឃ្លាំងទិន្នន័យទេ។</translation>
+    </message>
+    <message>
+        <source>Successfully edited the database.</source>
+        <translation>កែមូលដ្ឋានទិន្នន័យបានដោយជោគជ័យ។</translation>
+    </message>
+    <message>
+        <source>Loading the new key file failed: %1</source>
+        <translation>កំពុងផ្ទុកឯកសារសោថ្មីមិនបានសម្រេច៖ %1</translation>
+    </message>
+    <message>
+        <source>Unset the password for the database.</source>
+        <translation>មិនបានកំណត់ពាក្យសម្ងាត់សម្រាប់ទិន្នន័យ</translation>
+    </message>
+    <message>
+        <source>Unset the key file for the database.</source>
+        <translation>មិនបានកំណត់ឯកសារគន្លឹះសម្រាប់ទិន្នន័យ</translation>
+    </message>
+    <message>
+        <source>Cannot use %1 and %2 at the same time.</source>
+        <translation>មិន​អាច​ប្រើប្រាស់ % 1 និង% 2 ក្នុង​ពេល​តែ​មួយ​បាន​ទេ។</translation>
+    </message>
+    <message>
+        <source>Cannot remove all the keys from a database.</source>
+        <translation>មិនអាចដកសោទាំងអស់ចេញពីមូលដ្ឋានទិន្នន័យបានទេ។</translation>
+    </message>
+    <message>
+        <source>Cannot remove password: The database does not have a password.</source>
+        <translation>មិន​អាច​ដក​ពាក្យ​សម្ងាត់​ចេញបានទេ៖ មូលដ្ឋាន​ទិន្នន័យ​មិន​មាន​ពាក្យ​សម្ងាត់​ទេ។</translation>
+    </message>
+    <message>
+        <source>Cannot remove file key: The database does not have a file key.</source>
+        <translation>មិន​អាច​យក​សោឯកសារ​ចេញ៖ មូលដ្ឋាន​ទិន្នន័យ​មិន​មាន​សោឯកសារទេ។</translation>
+    </message>
+    <message>
+        <source>Found unexpected Key type %1</source>
+        <translation>បានរកឃើញប្រភេទសោដែលមានបញ្ហាដោយមិនរំពឹងទុក %1</translation>
+    </message>
+    <message>
+        <source>Set the key file for the database.
+This options is deprecated, use --set-key-file instead.</source>
+        <translation>កំណត់ឯកសារសោសម្រាប់មូលដ្ឋានទិន្នន័យ។
+ជម្រើសនេះត្រូវបានបដិសេធ ប្រើ --កំណត-សោ-ឯកសារ ជំនួសវិញ។</translation>
+    </message>
+    <message>
+        <source>KeePassXC is not running. No open database to lock</source>
+        <translation>KeePassXC មិនកំពុងដំណើរការទេ។ មិនមានមូលដ្ឋានទិន្នន័យដែលបានបើកដើម្បីចាក់សោទេ</translation>
     </message>
     <message>
         <source>allow screenshots and app recording (Windows/macOS)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>AES initialization failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>AES encrypt failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Failed to store in Linux Keyring</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Could not locate key in keyring</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Could not read key in keyring</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>AES decrypt failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>No Polkit authentication agent was available</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Polkit authorization failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>No Quick Unlock provider is available</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Polkit returned an error: %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Failed to init KeePassXC crypto.</source>
-        <translation>មិនបានសម្រេចក្នុងការបង្កើតការបំលែងកូដ KeePassXC។</translation>
-    </message>
-    <message>
-        <source>Failed to encrypt key data.</source>
-        <translation>បានបរាជ័យក្នុងការអ៊ិនគ្រីបទិន្នន័យគន្លឹះ។</translation>
-    </message>
-    <message>
-        <source>Failed to get Windows Hello credential.</source>
-        <translation>បានបរាជ័យក្នុងការទទួលបាន Windows Hello។</translation>
-    </message>
-    <message>
-        <source>Failed to decrypt key data.</source>
-        <translation>មិនបានសម្រេចក្នុងការឌិគ្រីបទិន្នន័យសោ។</translation>
-    </message>
-    <message>
-        <source>Passkeys</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -8257,6 +8004,18 @@ Kernel: %3 %4</source>
 </context>
 <context>
     <name>ReportsWidgetBrowserStatistics</name>
+    <message>
+        <source>Exclude expired entries from the report</source>
+        <translation>មិនរាប់បញ្ចូលទិន្នន័យបញ្ចូលដែលផុតកំណត់ពីរបាយការណ៍នេះ</translation>
+    </message>
+    <message>
+        <source>Show only entries which have URL set</source>
+        <translation>ការបង្ហាញតែទិន្នន័យដែល URL បានកំណត់</translation>
+    </message>
+    <message>
+        <source>Show only entries which have browser settings in custom data</source>
+        <translation>ការបង្ហាញតែទិន្នន័យដែលមានការកំណត់កម្មវិធីរុករកតាមអ៊ីនធឺណិតនៅក្នុងទិន្នន័យផ្ទាល់ខ្លួន</translation>
+    </message>
     <message>
         <source>Double-click entries to edit.</source>
         <translation>ចុចពីរដងទៅលើទិន្នន័យបញ្ចូលដើម្បីកែសម្រួល។</translation>
@@ -8321,25 +8080,17 @@ Kernel: %3 %4</source>
         <source>Exclude from reports</source>
         <translation>មិនរាប់បញ្ចូលពីរបាយការណ៍</translation>
     </message>
-    <message>
-        <source>Only show entries that have a URL</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Only show entries that have been explicitly allowed or denied</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Show expired entries</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source> (Expired)</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>ReportsWidgetHealthcheck</name>
+    <message>
+        <source>Exclude expired entries from the report</source>
+        <translation>មិនរាប់បញ្ចូលទិន្នន័យបញ្ចូលដែលផុតកំណត់ពីរបាយការណ៍នេះ</translation>
+    </message>
+    <message>
+        <source>Also show entries that have been excluded from reports</source>
+        <translation>បង្ហាញទិន្នន័យបញ្ចូលដែលបានដកចេញពីរបាយការណ៍ផងដែរ</translation>
+    </message>
     <message>
         <source>Hover over reason to show additional details. Double-click entries to edit.</source>
         <translation>ដាក់ពីលើហេតុផលដើម្បីបង្ហាញព័ត៌មានលម្អិតបន្ថែម។ ចុចទ្វេដងលើទិន្នន័យបញ្ចូលដើម្បីកែ។</translation>
@@ -8414,18 +8165,6 @@ Kernel: %3 %4</source>
     <message>
         <source>Exclude from reports</source>
         <translation>មិនរាប់បញ្ចូលពីរបាយការណ៍</translation>
-    </message>
-    <message>
-        <source>Show expired entries</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Show entries that have been excluded from reports</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source> (Expired)</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -8521,65 +8260,6 @@ Kernel: %3 %4</source>
     <message>
         <source>Exclude from reports</source>
         <translation>មិនរាប់បញ្ចូលពីរបាយការណ៍</translation>
-    </message>
-</context>
-<context>
-    <name>ReportsWidgetPasskeys</name>
-    <message>
-        <source>Export</source>
-        <translation>នំាចេញ</translation>
-    </message>
-    <message>
-        <source>Import</source>
-        <translation>នាំចូល</translation>
-    </message>
-    <message>
-        <source>List of entry URLs</source>
-        <translation>បញ្ជីនៃទិន្នន័យបញ្ចូល URLs</translation>
-    </message>
-    <message>
-        <source>Please wait, list of entries with Passkeys is being updated…</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>No entries with Passkeys.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Title</source>
-        <translation>ចំណងជើង</translation>
-    </message>
-    <message>
-        <source>Path</source>
-        <translation>ផ្លូវ</translation>
-    </message>
-    <message>
-        <source>Username</source>
-        <translation>ឈ្មោះអ្នកប្រើ</translation>
-    </message>
-    <message>
-        <source>URLs</source>
-        <translation>URLs</translation>
-    </message>
-    <message>
-        <source>Edit Entry…</source>
-        <translation>កែទិន្នន័យបញ្ចូល…</translation>
-    </message>
-    <message numerus="yes">
-        <source>Delete Entry(s)…</source>
-        <translation><numerusform>លុបការបញ្ចូល…</numerusform></translation>
-    </message>
-    <message>
-        <source>Relying Party</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Show expired entries</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source> (Expired)</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -8822,10 +8502,6 @@ Kernel: %3 %4</source>
         <translation>ស្វែងរកជំនួយ</translation>
     </message>
     <message>
-        <source>Save Search</source>
-        <translation>រក្សាទុកការស្វែងរក</translation>
-    </message>
-    <message>
         <source>Search (%1)…</source>
         <comment>Search placeholder text, %1 is the keyboard shortcut</comment>
         <translation>ស្វែងរក (%1)…</translation>
@@ -8837,6 +8513,10 @@ Kernel: %3 %4</source>
     <message>
         <source>Limit search to selected group</source>
         <translation>កំណត់ការស្វែងរកទៅកាន់ក្រុមដែលបានជ្រើសរើស</translation>
+    </message>
+    <message>
+        <source>Save Search</source>
+        <translation>រក្សាទុកការស្វែងរក</translation>
     </message>
 </context>
 <context>
@@ -9059,20 +8739,20 @@ Kernel: %3 %4</source>
 <context>
     <name>TagModel</name>
     <message>
-        <source>Clear Search</source>
-        <translation>ជម្រះការស្វែងរក</translation>
-    </message>
-    <message>
-        <source>All Entries</source>
-        <translation>ទិន្នន័យបញ្ចូលទាំងអស់</translation>
-    </message>
-    <message>
         <source>Expired</source>
         <translation>ផុតកំណត់</translation>
     </message>
     <message>
         <source>Weak Passwords</source>
         <translation>ពាក្យសម្ងាត់ខ្សោយ</translation>
+    </message>
+    <message>
+        <source>All Entries</source>
+        <translation>ទិន្នន័យបញ្ចូលទាំងអស់</translation>
+    </message>
+    <message>
+        <source>Clear Search</source>
+        <translation>ជម្រះការស្វែងរក</translation>
     </message>
 </context>
 <context>
@@ -9297,6 +8977,25 @@ Example: JBSWY3DPEHPK3PXP</source>
     <message>
         <source>Could not register global shortcut</source>
         <translation>មិនអាចចុះឈ្មោះផ្លូវកាត់ទូទៅបានទេ</translation>
+    </message>
+</context>
+<context>
+    <name>WindowsHello</name>
+    <message>
+        <source>Failed to init KeePassXC crypto.</source>
+        <translation>មិនបានសម្រេចក្នុងការបង្កើតការបំលែងកូដ KeePassXC។</translation>
+    </message>
+    <message>
+        <source>Failed to encrypt key data.</source>
+        <translation>បានបរាជ័យក្នុងការអ៊ិនគ្រីបទិន្នន័យគន្លឹះ។</translation>
+    </message>
+    <message>
+        <source>Failed to get Windows Hello credential.</source>
+        <translation>បានបរាជ័យក្នុងការទទួលបាន Windows Hello។</translation>
+    </message>
+    <message>
+        <source>Failed to decrypt key data.</source>
+        <translation>មិនបានសម្រេចក្នុងការឌិគ្រីបទិន្នន័យសោ។</translation>
     </message>
 </context>
 <context>

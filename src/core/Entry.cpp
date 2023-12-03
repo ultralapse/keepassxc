@@ -377,19 +377,16 @@ QString Entry::url() const
 QStringList Entry::getAllUrls() const
 {
     QStringList urlList;
-    auto entryUrl = url();
 
-    if (!entryUrl.isEmpty()) {
-        urlList << (EntryAttributes::matchReference(entryUrl).hasMatch() ? resolveMultiplePlaceholders(entryUrl)
-                                                                         : entryUrl);
+    if (!url().isEmpty()) {
+        urlList << url();
     }
 
     for (const auto& key : m_attributes->keys()) {
-        if (key.startsWith(EntryAttributes::AdditionalUrlAttribute)
-            || key == QString("%1_RELYING_PARTY").arg(EntryAttributes::PasskeyAttribute)) {
+        if (key.startsWith("KP2A_URL")) {
             auto additionalUrl = m_attributes->value(key);
             if (!additionalUrl.isEmpty()) {
-                urlList << resolveMultiplePlaceholders(additionalUrl);
+                urlList << additionalUrl;
             }
         }
     }
@@ -544,11 +541,6 @@ const CustomData* Entry::customData() const
 bool Entry::hasTotp() const
 {
     return !m_data.totpSettings.isNull();
-}
-
-bool Entry::hasPasskey() const
-{
-    return m_attributes->hasPasskey();
 }
 
 QString Entry::totp() const
@@ -846,6 +838,7 @@ void Entry::truncateHistory()
     int histMaxSize = db->metadata()->historyMaxSize();
     if (histMaxSize > -1) {
         int size = 0;
+        QSet<QByteArray> foundAttachments = attachments()->values();
 
         QMutableListIterator<Entry*> i(m_history);
         i.toBack();
@@ -855,6 +848,7 @@ void Entry::truncateHistory()
             // don't calculate size if it's already above the maximum
             if (size <= histMaxSize) {
                 size += historyItem->size();
+                foundAttachments += historyItem->attachments()->values();
             }
 
             if (size > histMaxSize) {
@@ -908,7 +902,7 @@ bool Entry::equals(const Entry* other, CompareItemOptions options) const
 
 Entry* Entry::clone(CloneFlags flags) const
 {
-    auto entry = new Entry();
+    Entry* entry = new Entry();
     entry->setUpdateTimeinfo(false);
     if (flags & CloneNewUuid) {
         entry->m_uuid = QUuid::createUuid();
@@ -1225,7 +1219,7 @@ QString Entry::referenceFieldValue(EntryReferenceType referenceType) const
     default:
         break;
     }
-    return {};
+    return QString();
 }
 
 void Entry::moveUp()
@@ -1342,7 +1336,7 @@ QString Entry::resolvePlaceholder(const QString& placeholder) const
 QString Entry::resolveUrlPlaceholder(const QString& str, Entry::PlaceholderType placeholderType) const
 {
     if (str.isEmpty()) {
-        return {};
+        return QString();
     }
 
     const QUrl qurl(str);
@@ -1373,7 +1367,7 @@ QString Entry::resolveUrlPlaceholder(const QString& str, Entry::PlaceholderType 
     }
     }
 
-    return {};
+    return QString();
 }
 
 Entry::PlaceholderType Entry::placeholderType(const QString& placeholder) const
@@ -1445,7 +1439,7 @@ QString Entry::resolveUrl(const QString& url) const
         }
 
         // No URL in this command
-        return {};
+        return QString("");
     }
 
     if (!newUrl.isEmpty() && !newUrl.contains("://")) {

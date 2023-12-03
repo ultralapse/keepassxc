@@ -27,7 +27,9 @@ public:
     static QFont fixedFont();
 
 private:
-    Font() = default;
+    Font()
+    {
+    }
 };
 
 #endif // KEEPASSX_FONT_H

@@ -79,7 +79,9 @@ ReportsWidgetHibp::ReportsWidgetHibp(QWidget* parent)
     new QShortcut(Qt::Key_Delete, this, SLOT(deleteSelectedEntries()));
 }
 
-ReportsWidgetHibp::~ReportsWidgetHibp() = default;
+ReportsWidgetHibp::~ReportsWidgetHibp()
+{
+}
 
 void ReportsWidgetHibp::loadSettings(QSharedPointer<Database> db)
 {
@@ -131,7 +133,7 @@ void ReportsWidgetHibp::makeHibpTable()
         }
     }
 
-    // Sort descending by the number the password has been exposed
+    // Sort decending by the number the password has been exposed
     qSort(items.begin(), items.end(), [](QPair<Entry*, int>& lhs, QPair<Entry*, int>& rhs) {
         return lhs.second > rhs.second;
     });

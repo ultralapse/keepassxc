@@ -88,7 +88,7 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     QObject::connect(textLabel, SIGNAL(linkActivated(QString)), q, SIGNAL(linkActivated(QString)));
     QObject::connect(textLabel, SIGNAL(linkHovered(QString)), q, SIGNAL(linkHovered(QString)));
 
-    auto closeAction = new QAction(q);
+    QAction *closeAction = new QAction(q);
     closeAction->setText(KMessageWidget::tr("&Close"));
     closeAction->setToolTip(KMessageWidget::tr("Close message"));
     closeAction->setIcon(icons()->icon("message-close"));
@@ -114,7 +114,7 @@ void KMessageWidgetPrivate::createLayout()
 
     const auto actions = q->actions();
     for (QAction *action: actions) {
-        auto button = new QToolButton(content);
+        QToolButton *button = new QToolButton(content);
         button->setDefaultAction(action);
         button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         buttons.append(button);
@@ -126,12 +126,12 @@ void KMessageWidgetPrivate::createLayout()
     closeButton->setAutoRaise(buttons.isEmpty());
 
     if (wordWrap) {
-        auto layout = new QGridLayout(content);
+        QGridLayout *layout = new QGridLayout(content);
         // Set alignment to make sure icon does not move down if text wraps
         layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
         layout->addWidget(textLabel, 0, 1);
 
-        auto buttonLayout = new QHBoxLayout;
+        QHBoxLayout *buttonLayout = new QHBoxLayout;
         buttonLayout->addStretch();
         for (QToolButton* button: asConst(buttons)) {
             // For some reason, calling show() is necessary if wordwrap is true,
@@ -143,7 +143,7 @@ void KMessageWidgetPrivate::createLayout()
         buttonLayout->addWidget(closeButton);
         layout->addItem(buttonLayout, 1, 0, 1, 2);
     } else {
-        auto layout = new QHBoxLayout(content);
+        QHBoxLayout *layout = new QHBoxLayout(content);
         layout->addWidget(iconLabel);
         layout->addWidget(textLabel);
 

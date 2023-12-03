@@ -115,7 +115,7 @@ void TestEntry::testClone()
     QScopedPointer<Entry> entryCloneRename(entryOrg->clone(Entry::CloneRenameTitle));
     QCOMPARE(entryCloneRename->uuid(), entryOrg->uuid());
     QCOMPARE(entryCloneRename->title(), QString("New Title - Clone"));
-    // Cloning should not modify time info unless explicitly requested
+    // Cloning should not modify time info unless explicity requested
     QCOMPARE(entryCloneRename->timeInfo(), entryOrg->timeInfo());
 
     QScopedPointer<Entry> entryCloneResetTime(entryOrg->clone(Entry::CloneResetTimeInfo));
@@ -591,7 +591,7 @@ void TestEntry::testResolveClonedEntry()
 
 void TestEntry::testIsRecycled()
 {
-    auto entry = new Entry();
+    Entry* entry = new Entry();
     QVERIFY(!entry->isRecycled());
 
     Database db;
@@ -604,10 +604,10 @@ void TestEntry::testIsRecycled()
     db.recycleEntry(entry);
     QVERIFY(entry->isRecycled());
 
-    auto group1 = new Group();
+    Group* group1 = new Group();
     group1->setParent(root);
 
-    auto entry1 = new Entry();
+    Entry* entry1 = new Entry();
     entry1->setGroup(group1);
     QVERIFY(!entry1->isRecycled());
     db.recycleGroup(group1);
@@ -620,16 +620,16 @@ void TestEntry::testMoveUpDown()
     Group* root = db.rootGroup();
     QVERIFY(root);
 
-    auto entry0 = new Entry();
+    Entry* entry0 = new Entry();
     QVERIFY(entry0);
     entry0->setGroup(root);
-    auto entry1 = new Entry();
+    Entry* entry1 = new Entry();
     QVERIFY(entry1);
     entry1->setGroup(root);
-    auto entry2 = new Entry();
+    Entry* entry2 = new Entry();
     QVERIFY(entry2);
     entry2->setGroup(root);
-    auto entry3 = new Entry();
+    Entry* entry3 = new Entry();
     QVERIFY(entry3);
     entry3->setGroup(root);
     // default order, straight

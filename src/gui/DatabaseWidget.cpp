@@ -64,10 +64,6 @@
 #include "sshagent/SSHAgent.h"
 #endif
 
-#ifdef WITH_XC_BROWSER_PASSKEYS
-#include "gui/passkeys/PasskeyImporter.h"
-#endif
-
 DatabaseWidget::DatabaseWidget(QSharedPointer<Database> db, QWidget* parent)
     : QStackedWidget(parent)
     , m_db(std::move(db))
@@ -226,10 +222,6 @@ DatabaseWidget::DatabaseWidget(QSharedPointer<Database> db, QWidget* parent)
     connectDatabaseSignals();
 
     m_blockAutoSave = false;
-
-    m_autosaveTimer = new QTimer(this);
-    m_autosaveTimer->setSingleShot(true);
-    connect(m_autosaveTimer, SIGNAL(timeout()), this, SLOT(onAutosaveDelayTimeout()));
 
     m_searchLimitGroup = config()->get(Config::SearchLimitGroup).toBool();
 
@@ -913,7 +905,7 @@ void DatabaseWidget::openUrlForEntry(Entry* entry)
                                this);
             msgbox.setDefaultButton(QMessageBox::No);
 
-            auto checkbox = new QCheckBox(tr("Remember my choice"), &msgbox);
+            QCheckBox* checkbox = new QCheckBox(tr("Remember my choice"), &msgbox);
             msgbox.setCheckBox(checkbox);
             bool remember = false;
             QObject::connect(checkbox, &QCheckBox::stateChanged, [&](int state) {
@@ -1400,30 +1392,6 @@ void DatabaseWidget::switchToDatabaseSecurity()
     m_databaseSettingDialog->showDatabaseKeySettings();
 }
 
-#ifdef WITH_XC_BROWSER_PASSKEYS
-void DatabaseWidget::switchToPasskeys()
-{
-    switchToDatabaseReports();
-    m_reportsDialog->activatePasskeysPage();
-}
-
-void DatabaseWidget::showImportPasskeyDialog(bool isEntry)
-{
-    PasskeyImporter passkeyImporter;
-
-    if (isEntry) {
-        auto currentEntry = currentSelectedEntry();
-        if (!currentEntry) {
-            return;
-        }
-
-        passkeyImporter.importPasskey(m_db, currentEntry);
-    } else {
-        passkeyImporter.importPasskey(m_db);
-    }
-}
-#endif
-
 void DatabaseWidget::performUnlockDatabase(const QString& password, const QString& keyfile)
 {
     if (password.isEmpty() && keyfile.isEmpty()) {
@@ -1563,42 +1531,13 @@ void DatabaseWidget::onGroupChanged()
 
 void DatabaseWidget::onDatabaseModified()
 {
+    if (!m_blockAutoSave && config()->get(Config::AutoSaveAfterEveryChange).toBool()) {
+        save();
+    } else {
+        // Only block once, then reset
+        m_blockAutoSave = false;
+    }
     refreshSearch();
-    int autosaveDelayMs = m_db->metadata()->autosaveDelayMin() * 60 * 1000; // min to msec for QTimer
-    bool autosaveAfterEveryChangeConfig = config()->get(Config::AutoSaveAfterEveryChange).toBool();
-    if (autosaveDelayMs > 0 && autosaveAfterEveryChangeConfig) {
-        // reset delay when modified
-        m_autosaveTimer->start(autosaveDelayMs);
-        return;
-    }
-    if (!m_blockAutoSave && autosaveAfterEveryChangeConfig) {
-        save();
-    } else {
-        // Only block once, then reset
-        m_blockAutoSave = false;
-    }
-}
-
-void DatabaseWidget::onAutosaveDelayTimeout()
-{
-    const bool isAutosaveDelayEnabled = m_db->metadata()->autosaveDelayMin() > 0;
-    const bool autosaveAfterEveryChangeConfig = config()->get(Config::AutoSaveAfterEveryChange).toBool();
-    if (!(isAutosaveDelayEnabled && autosaveAfterEveryChangeConfig)) {
-        // User might disable the delay/autosave while the timer is running
-        return;
-    }
-    if (!m_blockAutoSave) {
-        save();
-    } else {
-        // Only block once, then reset
-        m_blockAutoSave = false;
-    }
-}
-
-void DatabaseWidget::triggerAutosaveTimer()
-{
-    m_autosaveTimer->stop();
-    QMetaObject::invokeMethod(m_autosaveTimer, "timeout");
 }
 
 void DatabaseWidget::onDatabaseNonDataChanged()
@@ -1685,7 +1624,10 @@ void DatabaseWidget::closeEvent(QCloseEvent* event)
         return;
     }
 
-    m_databaseOpenWidget->resetQuickUnlock();
+    // Reset quick unlock if we are not remembering it
+    if (!config()->get(Config::Security_QuickUnlockRemember).toBool()) {
+        m_databaseOpenWidget->resetQuickUnlock();
+    }
     event->accept();
 }
 
@@ -1917,7 +1859,7 @@ QStringList DatabaseWidget::customEntryAttributes() const
 {
     Entry* entry = m_entryView->currentEntry();
     if (!entry) {
-        return {};
+        return QStringList();
     }
 
     return entry->attributes()->customKeys();
@@ -2068,7 +2010,6 @@ bool DatabaseWidget::save()
     if (performSave(errorMessage)) {
         m_saveAttempts = 0;
         m_blockAutoSave = false;
-        m_autosaveTimer->stop(); // stop autosave delay to avoid triggering another save
         return true;
     }
 

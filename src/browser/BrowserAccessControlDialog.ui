@@ -31,7 +31,7 @@
     </widget>
    </item>
    <item>
-    <widget class="CustomTableWidget" name="itemsTable">
+    <widget class="QTableWidget" name="itemsTable">
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>
@@ -39,10 +39,7 @@
       <bool>false</bool>
      </property>
      <property name="selectionMode">
-      <enum>QAbstractItemView::ExtendedSelection</enum>
-     </property>
-     <property name="selectionBehavior">
-      <enum>QAbstractItemView::SelectRows</enum>
+      <enum>QAbstractItemView::NoSelection</enum>
      </property>
      <property name="cornerButtonEnabled">
       <bool>false</bool>
@@ -113,19 +110,6 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>rememberDecisionCheckBox</tabstop>
-  <tabstop>allowButton</tabstop>
-  <tabstop>denyButton</tabstop>
- </tabstops>
- <customwidgets>
-  <customwidget>
-   <class>CustomTableWidget</class>
-   <extends>QTableWidget</extends>
-   <header>browser/CustomTableWidget.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

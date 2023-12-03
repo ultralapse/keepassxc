@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 KeePassXC Team <team@keepassxc.org>
+ * Copyright (C) 2021 KeePassXC Team <team@keepassxc.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@
 #define KEEPASSX_DATABASETABWIDGET_H
 
 #include "DatabaseOpenDialog.h"
-#include "config-keepassx.h"
 #include "gui/MessageWidget.h"
 
 #include <QTabWidget>
@@ -85,11 +84,6 @@ public slots:
     void showDatabaseSecurity();
     void showDatabaseReports();
     void showDatabaseSettings();
-#ifdef WITH_XC_BROWSER_PASSKEYS
-    void showPasskeys();
-    void importPasskey();
-    void importPasskeyToEntry();
-#endif
     void performGlobalAutoType(const QString& search);
     void performBrowserUnlock();
 
@@ -123,7 +117,6 @@ private:
     QPointer<DatabaseWidget> m_dbWidgetPendingLock;
     QPointer<DatabaseOpenDialog> m_databaseOpenDialog;
     QTimer m_lockDelayTimer;
-    bool m_databaseOpenInProgress;
 };
 
 #endif // KEEPASSX_DATABASETABWIDGET_H

@@ -37,12 +37,12 @@ QWidget* ReportsPageStatistics::createWidget()
 
 void ReportsPageStatistics::loadSettings(QWidget* widget, QSharedPointer<Database> db)
 {
-    auto settingsWidget = reinterpret_cast<ReportsWidgetStatistics*>(widget);
+    ReportsWidgetStatistics* settingsWidget = reinterpret_cast<ReportsWidgetStatistics*>(widget);
     settingsWidget->loadSettings(db);
 }
 
 void ReportsPageStatistics::saveSettings(QWidget* widget)
 {
-    auto settingsWidget = reinterpret_cast<ReportsWidgetStatistics*>(widget);
+    ReportsWidgetStatistics* settingsWidget = reinterpret_cast<ReportsWidgetStatistics*>(widget);
     settingsWidget->saveSettings();
 }

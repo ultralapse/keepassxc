@@ -41,7 +41,9 @@ ReportsWidgetStatistics::ReportsWidgetStatistics(QWidget* parent)
     m_ui->statisticsTableView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
 }
 
-ReportsWidgetStatistics::~ReportsWidgetStatistics() = default;
+ReportsWidgetStatistics::~ReportsWidgetStatistics()
+{
+}
 
 void ReportsWidgetStatistics::addStatsRow(QString name, QString value, bool bad, QString badMsg)
 {

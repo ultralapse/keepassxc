@@ -85,6 +85,7 @@ public:
         GUI_MinimizeOnClose,
         GUI_HideUsernames,
         GUI_HidePasswords,
+        GUI_AdvancedSettings,
         GUI_ColorPasswords,
         GUI_MonospaceNotes,
         GUI_ApplicationTheme,
@@ -124,6 +125,7 @@ public:
         Security_NoConfirmMoveEntryToRecycleBin,
         Security_EnableCopyOnDoubleClick,
         Security_QuickUnlock,
+        Security_QuickUnlockRemember,
 
         Browser_Enabled,
         Browser_ShowNotification,
@@ -134,7 +136,6 @@ public:
         Browser_UseCustomProxy,
         Browser_CustomProxyLocation,
         Browser_UpdateBinaryPath,
-        Browser_AllowGetDatabaseEntriesRequest,
         Browser_AllowExpiredCredentials,
         Browser_AlwaysAllowAccess,
         Browser_AlwaysAllowUpdate,

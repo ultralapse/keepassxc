@@ -43,7 +43,7 @@ public:
         KeepLocal, // merge history forcing local as top regardless of age
         KeepRemote, // merge history forcing remote as top regardless of age
         KeepNewer, // merge history
-        Synchronize, // merge history keeping most recent as top entry and applying deletions
+        Synchronize, // merge history keeping most recent as top entry and appling deletions
     };
 
     enum CloneFlag
@@ -78,14 +78,13 @@ public:
     };
 
     Group();
-    ~Group() override;
+    ~Group();
 
     const QUuid& uuid() const;
     const QString uuidToHex() const;
     QString name() const;
     QString notes() const;
     QString tags() const;
-    QString fullPath() const;
     int iconNumber() const;
     const QUuid& iconUuid() const;
     const TimeInfo& timeInfo() const;

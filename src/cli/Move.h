@@ -24,9 +24,9 @@ class Move : public DatabaseCommand
 {
 public:
     Move();
-    ~Move() override;
+    ~Move();
 
-    int executeWithDatabase(QSharedPointer<Database> db, QSharedPointer<QCommandLineParser> parser) override;
+    int executeWithDatabase(QSharedPointer<Database> db, QSharedPointer<QCommandLineParser> parser);
 };
 
 #endif // KEEPASSXC_MOVE_H

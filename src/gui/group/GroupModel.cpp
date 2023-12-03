@@ -74,7 +74,7 @@ int GroupModel::columnCount(const QModelIndex& parent) const
 QModelIndex GroupModel::index(int row, int column, const QModelIndex& parent) const
 {
     if (!hasIndex(row, column, parent)) {
-        return {};
+        return QModelIndex();
     }
 
     Group* group;
@@ -91,7 +91,7 @@ QModelIndex GroupModel::index(int row, int column, const QModelIndex& parent) co
 QModelIndex GroupModel::parent(const QModelIndex& index) const
 {
     if (!index.isValid()) {
-        return {};
+        return QModelIndex();
     }
 
     return parent(groupFromIndex(index));
@@ -103,7 +103,7 @@ QModelIndex GroupModel::parent(Group* group) const
 
     if (!parentGroup) {
         // index is already the root group
-        return {};
+        return QModelIndex();
     } else {
         const Group* grandParentGroup = parentGroup->parentGroup();
         if (!grandParentGroup) {
@@ -118,7 +118,7 @@ QModelIndex GroupModel::parent(Group* group) const
 QVariant GroupModel::data(const QModelIndex& index, int role) const
 {
     if (!index.isValid()) {
-        return {};
+        return QVariant();
     }
 
     Group* group = groupFromIndex(index);
@@ -145,7 +145,7 @@ QVariant GroupModel::data(const QModelIndex& index, int role) const
         }
         return tooltip;
     } else {
-        return {};
+        return QVariant();
     }
 }
 
@@ -155,7 +155,7 @@ QVariant GroupModel::headerData(int section, Qt::Orientation orientation, int ro
     Q_UNUSED(orientation);
     Q_UNUSED(role);
 
-    return {};
+    return QVariant();
 }
 
 QModelIndex GroupModel::index(Group* group) const
@@ -333,7 +333,7 @@ QMimeData* GroupModel::mimeData(const QModelIndexList& indexes) const
         return nullptr;
     }
 
-    auto data = new QMimeData();
+    QMimeData* data = new QMimeData();
     QByteArray encoded;
     QDataStream stream(&encoded, QIODevice::WriteOnly);
 

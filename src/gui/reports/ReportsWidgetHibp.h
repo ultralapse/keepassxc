@@ -43,7 +43,7 @@ class ReportsWidgetHibp : public QWidget
     Q_OBJECT
 public:
     explicit ReportsWidgetHibp(QWidget* parent = nullptr);
-    ~ReportsWidgetHibp() override;
+    ~ReportsWidgetHibp();
 
     void loadSettings(QSharedPointer<Database> db);
     void saveSettings();

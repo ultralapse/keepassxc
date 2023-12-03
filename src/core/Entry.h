@@ -79,7 +79,7 @@ class Entry : public ModifiableObject
 
 public:
     Entry();
-    ~Entry() override;
+    ~Entry();
     const QUuid& uuid() const;
     const QString uuidToHex() const;
     int iconNumber() const;
@@ -121,7 +121,6 @@ public:
     void setExcludeFromReports(bool state);
 
     bool hasTotp() const;
-    bool hasPasskey() const;
     bool isExpired() const;
     bool willExpireInDays(int days) const;
     bool isRecycled() const;

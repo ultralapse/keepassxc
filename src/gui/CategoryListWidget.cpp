@@ -43,7 +43,9 @@ CategoryListWidget::CategoryListWidget(QWidget* parent)
     // clang-format on
 }
 
-CategoryListWidget::~CategoryListWidget() = default;
+CategoryListWidget::~CategoryListWidget()
+{
+}
 
 QSize CategoryListWidget::sizeHint() const
 {
@@ -62,13 +64,13 @@ QSize CategoryListWidget::sizeHint() const
 
 QSize CategoryListWidget::minimumSizeHint() const
 {
-    return {m_itemDelegate->minWidth() + m_ui->categoryList->frameWidth() * 2,
-            m_ui->categoryList->sizeHintForRow(0) * 2};
+    return QSize(m_itemDelegate->minWidth() + m_ui->categoryList->frameWidth() * 2,
+                 m_ui->categoryList->sizeHintForRow(0) * 2);
 }
 
 int CategoryListWidget::addCategory(const QString& labelText, const QIcon& icon)
 {
-    auto item = new QListWidgetItem(m_ui->categoryList);
+    QListWidgetItem* item = new QListWidgetItem(m_ui->categoryList);
     item->setText(labelText);
     item->setIcon(icon);
     m_ui->categoryList->addItem(item);

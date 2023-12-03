@@ -33,7 +33,9 @@ TagModel::TagModel(QObject* parent)
                       << qMakePair(tr("Weak Passwords"), QString("is:weak"));
 }
 
-TagModel::~TagModel() = default;
+TagModel::~TagModel()
+{
+}
 
 void TagModel::setDatabase(QSharedPointer<Database> db)
 {

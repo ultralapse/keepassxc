@@ -42,7 +42,9 @@ namespace Phantom
     struct Rgb
     {
         qreal r, g, b;
-        Rgb() = default;
+        Rgb()
+        {
+        }
         Rgb(qreal r, qreal g, qreal b)
             : r(r)
             , g(g)
@@ -76,7 +78,9 @@ namespace Phantom
     struct Hsl
     {
         qreal h, s, l;
-        Hsl() = default;
+        Hsl()
+        {
+        }
         Hsl(qreal h, qreal s, qreal l)
             : h(h)
             , s(s)

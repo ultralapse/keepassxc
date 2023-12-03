@@ -27,7 +27,6 @@
 #include "keys/FileKey.h"
 #include "keys/PasswordKey.h"
 #include "mock/MockChallengeResponseKey.h"
-#include "mock/MockClock.h"
 #include <QTest>
 
 int main(int argc, char* argv[])
@@ -114,17 +113,6 @@ void TestKdbx4AesKdf::initTestCaseImpl()
 }
 
 Q_DECLARE_METATYPE(QUuid)
-
-void TestKdbx4Format::init()
-{
-    MockClock::setup(new MockClock());
-}
-
-void TestKdbx4Format::cleanup()
-{
-    MockClock::teardown();
-}
-
 void TestKdbx4Format::testFormat400()
 {
     QString filename = QString(KEEPASSX_TEST_DATA_DIR).append("/Format400.kdbx");

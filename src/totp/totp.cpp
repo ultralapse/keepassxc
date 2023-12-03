@@ -49,11 +49,11 @@ static QString getNameForHashType(const Totp::Algorithm hashType)
 {
     switch (hashType) {
     case Totp::Algorithm::Sha512:
-        return "SHA512";
+        return QString("SHA512");
     case Totp::Algorithm::Sha256:
-        return "SHA256";
+        return QString("SHA256");
     default:
-        return "SHA1";
+        return QString("SHA1");
     }
 }
 

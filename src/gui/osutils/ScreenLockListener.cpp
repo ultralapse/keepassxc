@@ -25,4 +25,6 @@ ScreenLockListener::ScreenLockListener(QWidget* parent)
     connect(m_listener, SIGNAL(screenLocked()), this, SIGNAL(screenLocked()));
 }
 
-ScreenLockListener::~ScreenLockListener() = default;
+ScreenLockListener::~ScreenLockListener()
+{
+}

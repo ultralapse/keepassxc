@@ -30,7 +30,9 @@ RemoveGroup::RemoveGroup()
     positionalArguments.append({QString("group"), QObject::tr("Path of the group to remove."), QString("")});
 }
 
-RemoveGroup::~RemoveGroup() = default;
+RemoveGroup::~RemoveGroup()
+{
+}
 
 int RemoveGroup::executeWithDatabase(QSharedPointer<Database> database, QSharedPointer<QCommandLineParser> parser)
 {

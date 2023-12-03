@@ -48,14 +48,16 @@ private:
 
 Icons* Icons::m_instance(nullptr);
 
-Icons::Icons() = default;
+Icons::Icons()
+{
+}
 
 QString Icons::applicationIconName()
 {
 #ifdef KEEPASSXC_DIST_FLATPAK
-    return "org.keepassxc.KeePassXC";
+    return QString("org.keepassxc.KeePassXC");
 #else
-    return "keepassxc";
+    return QString("keepassxc");
 #endif
 }
 

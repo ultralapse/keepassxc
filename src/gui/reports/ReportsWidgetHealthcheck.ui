@@ -55,16 +55,16 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="showExpired">
+    <widget class="QCheckBox" name="excludeExpired">
      <property name="text">
-      <string>Show expired entries</string>
+      <string>Exclude expired entries from the report</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="showExcluded">
+    <widget class="QCheckBox" name="showKnownBadCheckBox">
      <property name="text">
-      <string>Show entries that have been excluded from reports</string>
+      <string>Also show entries that have been excluded from reports</string>
      </property>
     </widget>
    </item>
@@ -84,7 +84,7 @@
  </widget>
  <tabstops>
   <tabstop>healthcheckTableView</tabstop>
-  <tabstop>showExcluded</tabstop>
+  <tabstop>showKnownBadCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

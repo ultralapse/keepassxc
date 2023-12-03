@@ -30,7 +30,7 @@ class CsvParserModel : public QAbstractTableModel, public CsvParser
 
 public:
     explicit CsvParserModel(QObject* parent = nullptr);
-    ~CsvParserModel() override;
+    ~CsvParserModel();
     void setFilename(const QString& filename);
     QString getFileInfo();
     bool parse();

@@ -32,7 +32,7 @@ class WelcomeWidget : public QWidget
 
 public:
     explicit WelcomeWidget(QWidget* parent = nullptr);
-    ~WelcomeWidget() override;
+    ~WelcomeWidget();
     void refreshLastDatabases();
 
 signals:

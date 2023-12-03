@@ -119,19 +119,19 @@ public:
     /**
      * Constructs a KMessageWidget with the specified @p parent.
      */
-    explicit KMessageWidget(QWidget* parent = nullptr);
-
+    explicit KMessageWidget(QWidget *parent = 0);
+    
     /**
      * Constructs a KMessageWidget with the specified @p parent and
      * contents @p text.
      */
-    explicit KMessageWidget(const QString& text, QWidget* parent = nullptr);
-
+    explicit KMessageWidget(const QString &text, QWidget *parent = 0);
+    
     /**
      * Destructor.
      */
-    ~KMessageWidget() override;
-
+    ~KMessageWidget();
+    
     /**
      * Get the text of this message widget.
      * @see setText()
